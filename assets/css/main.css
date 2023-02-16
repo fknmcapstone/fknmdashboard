@@ -2706,7 +2706,7 @@ input, select, textarea {
 					}
 
 			.tiles article.style1 > .image:before {
-				background-color: #f2849e;
+				background-color: #00275A;
 			}
 
 			.tiles article.style2 > .image:before {
@@ -2718,15 +2718,15 @@ input, select, textarea {
 			}
 
 			.tiles article.style4 > .image:before {
-				background-color: #c75b9b;
+				background-color: #008571;
 			}
 
 			.tiles article.style5 > .image:before {
-				background-color: #ae85ca;
+				background-color: #007EAC;
 			}
 
 			.tiles article.style6 > .image:before {
-				background-color: #8499e7;
+				background-color: #58717F;
 			}
 
 			body:not(.is-touch) .tiles article:hover > .image {
