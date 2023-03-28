@@ -1431,10 +1431,6 @@ input, select, textarea {
 					margin-left: 100%;
 				}
 
-				.column {
-					flex: 50%;
-				}
-
 				.row.gtr-0 {
 					margin-top: 0;
 					margin-left: 0em;
@@ -1536,6 +1532,10 @@ input, select, textarea {
 						.row.gtr-200.gtr-uniform > * {
 							padding-top: 2em;
 						}
+
+			.column {
+				flex: 50%;
+			}
 
 		}
 
@@ -1680,10 +1680,6 @@ input, select, textarea {
 					margin-left: 100%;
 				}
 
-				.column {
-					width: 100%;
-				}
-
 				.row.gtr-0 {
 					margin-top: 0;
 					margin-left: 0em;
@@ -1785,6 +1781,10 @@ input, select, textarea {
 						.row.gtr-200.gtr-uniform > * {
 							padding-top: 2em;
 						}
+			
+			.column {
+				width: 100%;
+			}
 
 		}
 
