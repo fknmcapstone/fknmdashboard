@@ -555,6 +555,10 @@ input, select, textarea {
 					padding-top: 4em;
 				}
 
+		.column {
+			flex: 50%;
+		}
+
 		@media screen and (max-width: 1680px) {
 
 			.row {
@@ -797,6 +801,10 @@ input, select, textarea {
 						.row.gtr-200.gtr-uniform > * {
 							padding-top: 4em;
 						}
+
+			.column {
+				flex: 50%;
+			}
 
 		}
 
@@ -1043,6 +1051,10 @@ input, select, textarea {
 							padding-top: 4em;
 						}
 
+			.column {
+				flex: 50%;
+			}
+
 		}
 
 		@media screen and (max-width: 980px) {
@@ -1287,6 +1299,10 @@ input, select, textarea {
 						.row.gtr-200.gtr-uniform > * {
 							padding-top: 3em;
 						}
+
+			.column {
+				flex: 50%;
+			}
 
 		}
 
@@ -1534,7 +1550,7 @@ input, select, textarea {
 						}
 
 			.column {
-				flex: 50%;
+				width: 100%;
 			}
 
 		}
