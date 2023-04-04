@@ -56,29 +56,24 @@
 				<!-- Dashboard Embedding-->
 					<div id="main">
 						<div class="inner">
-							<h3>Overall</h3>
-							<span class="image main"><img src="images/plate1.jpg" alt="" /></span>
-							<h3>Age Group: 2 - 3Y</h3>
-							<span class="image main"><img src="images/plate2.jpg" alt="" /></span>
-							<h3>Age Group: 4 - 8Y</h3>
-							<span class="image main"><img src="images/plate3.jpg" alt="" /></span>
-							<h3>Age Group: 9 - 13Y Male</h3>
-							<span class="image main"><img src="images/plate4.jpg" alt="" /></span>
-							<h3>Age Group: 9 - 13Y Female</h3>
-							<span class="image main"><img src="images/plate5.jpg" alt="" /></span>
-							<h3>Age Group: 14 - 18Y Male</h3>
-							<span class="image main"><img src="images/plate6.jpg" alt="" /></span>
-							<h3>Age Group: 14 - 18Y Female</h3>
-							<span class="image main"><img src="images/plate7.jpg" alt="" /></span>
+                            <select onchange="document.getElementById('preview').src = this.value">
+                                <option selected disabled>Overall</option>
+                                <option value="images/plate2.jpg">2 - 3Y</option>
+                                <option value="images/plate3.jpg">4 - 8Y</option>
+                                <option value="images/plate4.jpg">9 - 13Y Male</option>
+                                <option value="images/plate5.jpg">9 - 13Y Female</option>
+                                <option value="images/plate6.jpg">14 - 18Y Male</option>
+                                <option value="images/plate7.jpg">14 - 18Y Female</option>
+                            </select>
+                            <br>
+                            
+                            <img id="preview">
 
-							<section class="actions">
-								<div class="inner">
-									<a href="mealcomponents2.html" class="button primary">Filtered Version</a> 
-								</div>
-							</section>
+                            <br>
+                            <span class="image main"><img src="images/plate1.jpg" alt="" /></span>
 
 						</div>
-					</div>
+					</div>					
 
 				<!-- Footer -->
 					<footer id="footer">
