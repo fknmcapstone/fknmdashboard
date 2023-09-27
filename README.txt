@@ -21,21 +21,3 @@ Credits:
 	Other:
 		jQuery (jquery.com)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
-
-
-Capstone Login Info:
-
-Github: 
-fknmcapstone@outlook.com
-DataVisuals2023
-
-Outlook:
-fknmcapstone@outlook.com
-DataVisuals2023
-
-PowerBI:
-FKNMCapstoneTeam@FKNM.onmicrosoft.com
-DataVisuals2023
-
-Webpage:
-fknmcapstone.github.io/fknmdashboard
