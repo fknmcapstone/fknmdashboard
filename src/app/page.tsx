@@ -7,7 +7,7 @@ function Separator({ color = "black", height = 3 }) {
       style={{
         backgroundColor: "#002253",
         marginInline: "10rem",
-        marginBlock: "2rem",
+        marginBlock: "4rem",
         height: height,
         border: "none",
       }}
@@ -23,8 +23,8 @@ export default function Home() {
           <Image
             src="/fknm_logo.png"
             alt="FKNM Logo"
-            width={50}
-            height={50}
+            width={70}
+            height={70}
             priority
           />
         </div>
@@ -42,8 +42,8 @@ export default function Home() {
       <div className={styles.content}>
         <div className={styles.blurbContainer}>
           <Image
-            src="/fknm_logo.png"
-            alt="FKNM Logo"
+            src="/placeholder_visual_landing.png"
+            alt="FKNM Visual"
             width={700}
             height={300}
             priority
@@ -92,7 +92,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h3>Current Programs</h3>
+            <h3>Research</h3>
             <div className={styles.logo}>
               <Image
                 src="/fknm_logo.png"
@@ -118,7 +118,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h3>Current Programs</h3>
+            <h3>About Us</h3>
             <div className={styles.logo}>
               <Image
                 src="/fknm_logo.png"
@@ -135,11 +135,11 @@ export default function Home() {
           <p>In collaboration with:</p>
           <div>
             <p>Centre for Child Nutrition</p>
-            <p>Image here</p>
+            <div className={styles.collabCard}></div>
           </div>
           <div>
             <p>Centre for Child Nutrition</p>
-            <p>Image here</p>
+            <div className={styles.collabCard}></div>
           </div>
         </div>
       </div>

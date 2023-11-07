@@ -3,19 +3,23 @@
   justify-content: stretch;
   font-family: "Arial", sans-serif;
   background-color: #efefef;
+  font-family: var(--font-main);
 }
 
 .collabContainer {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   justify-self: center;
   width: 70%;
+  margin-bottom: 2rem;
 }
 
 .blurbContainer {
   display: flex;
   justify-self: center;
   padding-block: 2rem;
+  margin-top: 1rem;
   width: 65%;
 }
 
@@ -25,12 +29,21 @@
 
 .header p {
   color: white;
+  font-size: 2rem;
 }
 
 div.blurbContainer div p {
   align-self: center;
   color: black;
   padding-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+div.blurbContainer div a {
+  align-self: center;
+  color: black;
+  padding-bottom: 1rem;
+  text-decoration: underline;
 }
 
 div.blurbContainer div {
@@ -55,6 +68,7 @@ div.blurbContainer div {
   align-items: center;
   background-color: #113f81;
   font-size: 0.9rem;
+  padding-inline: 20rem;
 }
 
 .navigationbar p {
@@ -111,29 +125,54 @@ div.blurbContainer div {
 .cardContainer p {
   color: black;
   align-self: center;
-  text-align: center;
-  margin-inline: 2rem;
+  text-align: left;
+  font-size: 1.1rem;
+  margin-inline: 3rem;
+  width: 60%;
+}
+
+.cardContainer h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .cardRight {
-  padding: 1.5rem;
-  margin-inline: 2rem;
+  padding: 2rem;
+  margin-inline: 5rem;
   border-radius: var(--border-radius);
-  width: 18rem;
-  height: 14rem;
-  background: #164c8c;
+  width: 21rem;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 16rem;
+  background: #1f5394;
   border: 1px solid rgba(var(--card-border-rgb), 0);
   justify-self: left;
 }
 .cardLeft {
-  padding: 1.5rem;
-  margin-inline: 2rem;
+  padding: 2rem;
+  margin-inline: 5rem;
   justify-self: right;
   border-radius: var(--border-radius);
-  width: 18rem;
-  height: 14rem;
-  background: #164c8c;
+  width: 21rem;
+  height: 16rem;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #1f5394;
   border: 1px solid rgba(var(--card-border-rgb), 0);
+}
+
+.collabCard {
+  margin-top: 1rem;
+  border-radius: 15px;
+  width: 18rem;
+  height: 4rem;
+  background: #164c8c;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card span {
