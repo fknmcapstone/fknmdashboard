@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 function Separator({ color = "black", height = 3 }) {
   return (
@@ -18,27 +19,6 @@ function Separator({ color = "black", height = 3 }) {
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.header}>
-        <div className={styles.logo}>
-          <Image
-            src="/fknm_logo.png"
-            alt="FKNM Logo"
-            width={70}
-            height={70}
-            priority
-          />
-        </div>
-
-        <p>Feeding Kids, Nourishing Minds</p>
-      </div>
-
-      <div className={styles.navigationbar}>
-        <p>Current Programs</p>
-        <p>Research</p>
-        <p>News</p>
-        <p>Publications</p>
-        <p>About FKNM</p>
-      </div>
       <div className={styles.content}>
         <div className={styles.blurbContainer}>
           <Image
@@ -68,12 +48,7 @@ export default function Home() {
             programs and things you can possibly learn whooooo
           </p>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.cardRight}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="/current_programs/" className={styles.cardRight}>
             <h3>Current Programs</h3>
             <div className={styles.logo}>
               <Image
@@ -84,26 +59,42 @@ export default function Home() {
                 priority
               />
             </div>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.cardLeft}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>Research</h3>
-            <div className={styles.logo}>
-              <Image
-                src="/fknm_logo.png"
-                alt="FKNM Logo"
-                width={50}
-                height={50}
-                priority
-              />
-            </div>
-          </a>
+          </Link>
+          <div className={styles.cardResearchRow}>
+            <Link href="/intake_visuals/" className={styles.cardResearch}>
+              <h3>Intake Visuals</h3>
+              <div className={styles.logo}>
+                <Image
+                  src="/fknm_logo.png"
+                  alt="FKNM Logo"
+                  width={50}
+                  height={50}
+                  priority
+                />
+              </div>
+            </Link>
+            <Link
+              href="/measurement_tool_assessment/"
+              className={styles.cardResearch}
+            >
+              <h3>Measurement Tool Assessment</h3>
+              <div className={styles.logo}>
+                <Image
+                  src="/fknm_logo.png"
+                  alt="FKNM Logo"
+                  width={50}
+                  height={50}
+                  priority
+                />
+              </div>
+            </Link>
+          </div>
           <p>
+            Sample text about what this page will show you. More on research
+            used in this project and on relevant programs Sample text about what
+            this page will show you. More on research used in this project and
+            on relevant programs Sample text about what this page will show you.
+            More on research used in this project and on relevant programs
             Sample text about what this page will show you. More on research
             used in this project and on relevant programs
           </p>

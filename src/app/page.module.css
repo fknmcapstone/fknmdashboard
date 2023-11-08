@@ -1,9 +1,7 @@
 .main {
   display: grid;
   justify-content: stretch;
-  font-family: "Arial", sans-serif;
   background-color: #efefef;
-  font-family: var(--font-main);
 }
 
 .collabContainer {
@@ -52,6 +50,12 @@ div.blurbContainer div {
   color: black;
 }
 
+.cardResearchRow {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -65,14 +69,39 @@ div.blurbContainer div {
   height: 2.5rem;
   display: flex;
   justify-content: space-around;
-  align-items: center;
   background-color: #113f81;
   font-size: 0.9rem;
   padding-inline: 20rem;
+  color: white;
+  align-items: center;
+  line-height: 2.5rem;
+}
+.researchMenu {
+  line-height: 100%;
+  display: none;
+  position: relative;
+  transform: translateX(-25%);
+  z-index: 0;
+  height: min-content;
+  width: 10rem;
+  height: 8rem;
+  background-color: #113f81;
+  box-shadow:
+    0 0px 0px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0px 0px 10px 10px;
+  padding: 1rem;
+}
+.researchNavItem:hover .researchMenu,
+.researchMenu:hover {
+  position: fixed;
+  display: block;
+  z-index: 1;
 }
 
-.navigationbar p {
-  color: white;
+.researchMenu .link {
+  margin-left: 0.3rem;
+  display: block;
 }
 
 .content {
@@ -88,7 +117,6 @@ div.blurbContainer div {
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
 }
 
 .description a {
@@ -105,11 +133,6 @@ div.blurbContainer div {
   background-color: rgba(var(--callout-rgb), 0.5);
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
-}
-
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
 }
 
 .cardContainer {
@@ -146,7 +169,7 @@ div.blurbContainer div {
     0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 16rem;
-  background: #1f5394;
+  background: #164c8c;
   border: 1px solid rgba(var(--card-border-rgb), 0);
   justify-self: left;
 }
@@ -160,7 +183,21 @@ div.blurbContainer div {
   box-shadow:
     0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background: #1f5394;
+  background: #164c8c;
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+}
+
+.cardResearch {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  justify-self: right;
+  border-radius: var(--border-radius);
+  width: 21rem;
+  height: 16rem;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #164c8c;
   border: 1px solid rgba(var(--card-border-rgb), 0);
 }
 
