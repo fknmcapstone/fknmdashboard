@@ -34,9 +34,9 @@ export default function Home() {
               is done and how it started, more text, more words more
               explanation, some light description
             </p>
-            <a href="www.google.com">
+            <Link href="/covid_19_impacts/">
               Learn more about the impacts of COVID-19
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -126,11 +126,31 @@ export default function Home() {
           <p>In collaboration with:</p>
           <div>
             <p>Centre for Child Nutrition</p>
-            <div className={styles.collabCard}></div>
+            <a href="https://childnutrition.utoronto.ca/" target="_blank">
+              <div className={styles.collabCard}>
+                <Image
+                  src="/centre_child_nutrition_placeholder_logo.png"
+                  alt="Centre for Child Nutrition logo"
+                  width={280}
+                  height={50}
+                  priority
+                />
+              </div>
+            </a>
           </div>
           <div>
-            <p>Centre for Child Nutrition</p>
-            <div className={styles.collabCard}></div>
+            <p>Centre for Global Engineering</p>
+            <a href="https://cgen.utoronto.ca/" target="_blank">
+              <div className={styles.collabCard}>
+                <Image
+                  src="/UofT_engineering_placeholder_logo.png"
+                  alt="Centre for Child Nutrition logo"
+                  width={280}
+                  height={50}
+                  priority
+                />
+              </div>
+            </a>
           </div>
         </div>
       </div>

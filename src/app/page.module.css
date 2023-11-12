@@ -204,6 +204,8 @@ div.blurbContainer div {
 .collabCard {
   margin-top: 1rem;
   border-radius: 15px;
+  display: grid;
+  place-items: center;
   width: 18rem;
   height: 4rem;
   background: #164c8c;
