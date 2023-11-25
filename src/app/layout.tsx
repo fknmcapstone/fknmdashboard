@@ -52,30 +52,32 @@ export default function RootLayout({
             </div>
 
             <div className={styles.navigationbar}>
-              <Link href="/current_programs/">
-                <p>Current Programs</p>
-              </Link>
+              <div className={styles.navigationbarContent}>
+                <Link href="/current_programs/">
+                  <p>Current Programs</p>
+                </Link>
 
-              <div className={styles.researchNavItem}>
-                Research
-                <div className={styles.researchMenu}>
-                  <Link className={styles.link} href="/intake_visuals/">
-                    Intake Visuals
-                  </Link>
-                  <Separator />
-                  <Link
-                    className={styles.link}
-                    href="/measurement_tool_assessment/"
-                  >
-                    Measurement Tool Assessment
-                  </Link>
-                  <Separator />
+                <div className={styles.researchNavItem}>
+                  Research
+                  <div className={styles.researchMenu}>
+                    <Link className={styles.link} href="/intake_visuals/">
+                      Intake Visuals
+                    </Link>
+                    <Separator />
+                    <Link
+                      className={styles.link}
+                      href="/measurement_tool_assessment/"
+                    >
+                      Measurement Tool Assessment
+                    </Link>
+                    <Separator />
+                  </div>
                 </div>
-              </div>
 
-              <Link href="/current_programs/">News</Link>
-              <Link href="/current_programs/">Publications</Link>
-              <Link href="/about_fknm/">About FKNM</Link>
+                <Link href="/current_programs/">News</Link>
+                <Link href="/current_programs/">Publications</Link>
+                <Link href="/about_fknm/">About FKNM</Link>
+              </div>
             </div>
           </nav>
 
