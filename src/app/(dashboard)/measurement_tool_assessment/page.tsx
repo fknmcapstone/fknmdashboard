@@ -30,11 +30,12 @@ function GraphCard({
 
 let graphs = ["Component", "Method", "Socio Economic Factor", "Dimension"];
 let linkList = graphs.map((graphTitle, index) => {
-  return (
+  return [
+    <p>&#8226;</p>,
     <Link href={"#" + graphTitle.split(" ").pop()}>
       Programs by {graphTitle}
-    </Link>
-  );
+    </Link>,
+  ];
 });
 
 let graphCardList = graphs.map((graphTitle, index) => {
@@ -43,7 +44,7 @@ let graphCardList = graphs.map((graphTitle, index) => {
     <GraphCard
       id={"" + graphTitle.split(" ").pop()}
       column={column}
-      title={"Programs by " + graphTitle}
+      title={"Number of Programs by " + graphTitle}
     />
   );
 });
@@ -62,8 +63,8 @@ export default function MeasurementToolAssessment() {
         </p>
       </div>
       <div className={styles.shortcutMenu}>
-        <p>Shortcuts</p>
-        {linkList}
+        <p className={styles.shortcutMenuTitle}>Shortcuts</p>
+        <div className={styles.shortcutMenuList}>{linkList}</div>
       </div>
       {graphCardList}
     </main>
