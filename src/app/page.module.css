@@ -1,7 +1,112 @@
 .main {
   display: grid;
   justify-content: center;
-  background-color: #efefef;
+  background-color: var(--background-color);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  height: 5rem;
+  flex-direction: row;
+  background-color: var(--primary-color);
+}
+
+.header p {
+  color: var(--light-text-color);
+  font-size: var(--title-font-size);
+  white-space: nowrap;
+}
+
+.logo {
+  padding-right: 2rem;
+}
+
+.navigationbar {
+  height: 2.5rem;
+  display: flex;
+  font-size: var(--smaller-paragraph-font-size);
+  justify-content: space-around;
+  background-color: var(--secondary-color);
+  place-items: center;
+}
+
+.navigationbarContent {
+  height: 2.5rem;
+  display: flex;
+  white-space: nowrap;
+  color: var(--light-text-color);
+  align-items: center;
+}
+
+.navigationbarContent > * {
+  margin-inline: 3vw;
+}
+
+.researchMenu {
+  line-height: 100%;
+  display: none;
+  position: relative;
+  transform: translateX(-25%);
+  z-index: 0;
+  height: min-content;
+  width: 10rem;
+  height: 8rem;
+  background-color: var(--secondary-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 0px 0px 10px 10px;
+  padding: 1rem;
+  white-space: normal;
+}
+
+.researchNavItem:hover .researchMenu,
+.researchMenu:hover {
+  position: fixed;
+  display: block;
+  z-index: 1;
+}
+
+.researchMenu a {
+  margin-left: 0.3rem;
+  display: block;
+}
+
+.landingPageContent {
+  display: grid;
+  width: 90vw;
+  max-width: 150rem;
+  justify-content: center;
+}
+
+.blurbContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  margin-top: 3rem;
+  width: 65%;
+  color: var(--dark-text-color);
+  align-items: center;
+  justify-self: center;
+}
+
+div.blurbContainer p {
+  padding-bottom: 1rem;
+  font-size: var(--big-paragraph-font-size);
+}
+
+#covid19Link {
+  text-decoration: underline;
+}
+
+.navigationCardsContainer {
+  display: grid;
+  width: 65%;
+  justify-self: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
 }
 
 .collabContainer {
@@ -14,154 +119,14 @@
   margin-bottom: 2rem;
 }
 
-.blurbContainer {
-  display: flex;
-  justify-self: center;
-  padding-block: 2rem;
-  margin-top: 1rem;
-  width: 65%;
-}
-
-.logo {
-  padding-right: 2rem;
-}
-
-.header p {
-  color: white;
-  font-size: 2rem;
-  white-space: nowrap;
-}
-
-div.blurbContainer div p {
-  align-self: center;
-  color: black;
-  padding-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-div.blurbContainer div a {
-  align-self: center;
-  color: black;
-  padding-bottom: 1rem;
-  text-decoration: underline;
-}
-
-div.blurbContainer div {
-  padding-left: 2rem;
-  align-self: center;
-  color: black;
-}
-
-.cardResearchRow {
+.researchCardsContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  padding: 2rem;
-  height: 5rem;
-  flex-direction: row;
-  background-color: #002253;
-}
-
-.navigationbar {
-  height: 2.5rem;
-  display: flex;
-  justify-content: space-around;
-  background-color: #113f81;
-  place-items: center;
-}
-
-.navigationbarContent {
-  height: 2.5rem;
-  display: flex;
-  white-space: nowrap;
-  font-size: 0.9rem;
-  color: white;
-  align-items: center;
-}
-
-.navigationbarContent > * {
-  margin-inline: 2vw;
-}
-
-.researchMenu {
-  line-height: 100%;
-  display: none;
-  position: relative;
-  transform: translateX(-25%);
-  z-index: 0;
-  height: min-content;
-  width: 10rem;
-  height: 8rem;
-  background-color: #113f81;
-  box-shadow:
-    0 0px 0px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 0px 0px 10px 10px;
-  padding: 1rem;
-  white-space: normal;
-}
-.researchNavItem:hover .researchMenu,
-.researchMenu:hover {
-  position: fixed;
-  display: block;
-  z-index: 1;
-}
-
-.researchMenu .link {
-  margin-left: 0.3rem;
-  display: block;
-}
-
-.content {
-  display: grid;
-  width: 90vw;
-  max-width: 150rem;
-  justify-content: center;
-}
-
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-}
-
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.description p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
-}
-
-.cardContainer {
-  display: grid;
-  width: 65%;
-  justify-self: center;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  justify-items: center;
-}
-
-.cardContainer p {
-  color: black;
+.navigationCardsContainer p {
+  color: var(--dark-text-color);
   align-self: center;
   text-align: left;
   font-size: 1.1rem;
@@ -169,123 +134,49 @@ div.blurbContainer div {
   width: 60%;
 }
 
-.cardContainer h3 {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 600;
+.card h3 {
+  font-weight: 500;
+  font-size: var(--subtitle-font-size);
+}
+
+.card {
+  color: var(--light-text-color);
+  padding: 2rem;
+  margin-inline: 5rem;
+  border-radius: var(--card-border-radius);
+  width: 21rem;
+  height: 16rem;
+  box-shadow: var(--card-shadow);
+  background: var(--secondary-color);
+}
+
+.cardBottomMargin {
+  margin-bottom: 2rem;
 }
 
 .cardRight {
-  padding: 2rem;
-  margin-inline: 5rem;
-  border-radius: var(--border-radius);
-  width: 21rem;
-  box-shadow:
-    0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height: 16rem;
-  background: #164c8c;
-  border: 1px solid rgba(var(--card-border-rgb), 0);
   justify-self: left;
 }
-.cardLeft {
-  padding: 2rem;
-  margin-inline: 5rem;
-  justify-self: right;
-  border-radius: var(--border-radius);
-  width: 21rem;
-  height: 16rem;
-  box-shadow:
-    0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background: #164c8c;
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-}
 
-.cardResearch {
-  padding: 2rem;
-  margin-bottom: 2rem;
+.cardLeft {
   justify-self: right;
-  border-radius: var(--border-radius);
-  width: 21rem;
-  height: 16rem;
-  box-shadow:
-    0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background: #164c8c;
-  border: 1px solid rgba(var(--card-border-rgb), 0);
 }
 
 .collabCard {
   margin-top: 1rem;
-  border-radius: 15px;
+  border-radius: var(--small-card-border-radius);
   display: grid;
   place-items: center;
   width: 18rem;
   height: 4rem;
-  background: #164c8c;
-  box-shadow:
-    0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h3 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-  color: #efefef;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-}
-
-.center {
-  display: flex;
-  flex: 5;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
-}
-
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
-}
-
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
-}
-
-.center::before,
-.center::after {
-  content: "";
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
+  background: var(--secondary-color);
+  box-shadow: var(--card-shadow);
 }
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+    background: rgba(22, 76, 140, 0.7);
   }
 
   .card:hover span {

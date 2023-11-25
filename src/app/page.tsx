@@ -16,15 +16,49 @@ function Separator({ color = "black", height = 3 }) {
   );
 }
 
+function NavigationCard({
+  isResearchCard,
+  isLeft,
+  title,
+  link,
+}: {
+  isResearchCard: boolean;
+  isLeft: boolean;
+  title: string;
+  link: string;
+}) {
+  return (
+    <Link
+      href={link}
+      className={[
+        styles.card,
+        isResearchCard ? styles.cardBottomMargin : null,
+        isLeft ? styles.cardLeft : styles.cardRight,
+      ].join(" ")}
+    >
+      <h3>{title}</h3>
+      <div className={styles.logo}>
+        <Image
+          src="/fknm_logo.png"
+          alt="FKNM Logo"
+          width={50}
+          height={50}
+          priority
+        />
+      </div>
+    </Link>
+  );
+}
+
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.content}>
+      <div className={styles.landingPageContent}>
         <div className={styles.blurbContainer}>
           <Image
             src="/placeholder_visual_landing.png"
             alt="FKNM Visual"
-            width={700}
+            width={500}
             height={300}
             priority
           />
@@ -34,7 +68,7 @@ export default function Home() {
               is done and how it started, more text, more words more
               explanation, some light description
             </p>
-            <Link href="/covid_19_impacts/">
+            <Link id={styles.covid19Link} href="/covid_19_impacts/">
               Learn more about the impacts of COVID-19
             </Link>
           </div>
@@ -42,52 +76,30 @@ export default function Home() {
 
         <Separator />
 
-        <div className={styles.cardContainer}>
+        <div className={styles.navigationCardsContainer}>
           <p>
             Sample text about what this page will show you. More on Current
             programs and things you can possibly learn whooooo
           </p>
-
-          <Link href="/current_programs/" className={styles.cardRight}>
-            <h3>Current Programs</h3>
-            <div className={styles.logo}>
-              <Image
-                src="/fknm_logo.png"
-                alt="FKNM Logo"
-                width={50}
-                height={50}
-                priority
-              />
-            </div>
-          </Link>
-          <div className={styles.cardResearchRow}>
-            <Link href="/intake_visuals/" className={styles.cardResearch}>
-              <h3>Intake Visuals</h3>
-              <div className={styles.logo}>
-                <Image
-                  src="/fknm_logo.png"
-                  alt="FKNM Logo"
-                  width={50}
-                  height={50}
-                  priority
-                />
-              </div>
-            </Link>
-            <Link
-              href="/measurement_tool_assessment/"
-              className={styles.cardResearch}
-            >
-              <h3>Measurement Tool Assessment</h3>
-              <div className={styles.logo}>
-                <Image
-                  src="/fknm_logo.png"
-                  alt="FKNM Logo"
-                  width={50}
-                  height={50}
-                  priority
-                />
-              </div>
-            </Link>
+          <NavigationCard
+            title="Current Programs"
+            link="/current_programs/"
+            isResearchCard={false}
+            isLeft={false}
+          />
+          <div className={styles.researchCardsContainer}>
+            <NavigationCard
+              title="Intake Visuals"
+              link="/intake_visuals/"
+              isResearchCard={true}
+              isLeft={true}
+            />
+            <NavigationCard
+              title="Measurement Tool Assessment"
+              link="/measurement_tool_assessment/"
+              isResearchCard={true}
+              isLeft={true}
+            />
           </div>
           <p>
             Sample text about what this page will show you. More on research
@@ -103,23 +115,12 @@ export default function Home() {
             Sample text about what this page will show you. Learn more about
             where the data came from and more about the team too
           </p>
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className={styles.cardRight}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>About Us</h3>
-            <div className={styles.logo}>
-              <Image
-                src="/fknm_logo.png"
-                alt="FKNM Logo"
-                width={50}
-                height={50}
-                priority
-              />
-            </div>
-          </a>
+          <NavigationCard
+            title="About Us"
+            link="/about_fknm/"
+            isResearchCard={false}
+            isLeft={false}
+          />
         </div>
         <Separator />
         <div className={styles.collabContainer}>

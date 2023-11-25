@@ -60,14 +60,9 @@ export default function RootLayout({
                 <div className={styles.researchNavItem}>
                   Research
                   <div className={styles.researchMenu}>
-                    <Link className={styles.link} href="/intake_visuals/">
-                      Intake Visuals
-                    </Link>
+                    <Link href="/intake_visuals/">Intake Visuals</Link>
                     <Separator />
-                    <Link
-                      className={styles.link}
-                      href="/measurement_tool_assessment/"
-                    >
+                    <Link href="/measurement_tool_assessment/">
                       Measurement Tool Assessment
                     </Link>
                     <Separator />
