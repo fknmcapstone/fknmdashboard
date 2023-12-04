@@ -1,0 +1,92 @@
+.main {
+  display: grid;
+  width: 100%;
+  padding-top: 4rem;
+  padding-inline-end: 3rem;
+  padding-bottom: 7rem;
+  background-color: var(--background-color);
+  grid-template-columns: 3fr 2fr 5fr 5fr;
+  grid-template-rows: 30rem;
+  grid-auto-rows: 30rem;
+}
+
+#chartMenu {
+  justify-self: end;
+  grid-row: 1 / span 3;
+  padding: 1rem 2rem 3rem 2rem;
+  margin-inline-start: 1rem;
+  margin-inline-end: 3rem;
+  border-radius: var(--small-card-border-radius);
+  width: 80%;
+  max-width: 20rem;
+  min-width: 15rem;
+  height: min-content;
+  box-shadow: var(--card-shadow);
+  background: var(--secondary-color);
+  color: var(--light-text-color);
+  /* align-self: start;
+  position: sticky;
+  top: 0; */
+}
+
+.Fixed {
+  position: fixed;
+  top: 10rem;
+  left: 1rem;
+}
+
+#chartMenuList {
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  row-gap: 1.3rem;
+}
+
+#chartMenu a {
+  text-decoration: underline;
+}
+
+#chartMenuTitle {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: var(--small-paragraph-font-size);
+}
+
+.card {
+  margin-bottom: 2rem;
+  justify-self: end;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: var(--card-border-radius);
+  width: 95%;
+  max-width: 45rem;
+  box-shadow: var(--card-shadow);
+  height: 90%;
+  background: white;
+  font-weight: 600;
+  font-size: var(--subtitle-font-size);
+}
+
+.columnLeft {
+  grid-column: 2;
+}
+
+.columnMiddle {
+  grid-column: 3;
+}
+
+.columnRight {
+  grid-column: 4;
+}
+
+.columnMerged {
+  place-self: center;
+  grid-column: 3 / span 2;
+  max-width: 90rem;
+}
+
+.legend {
+  height: 70%;
+  max-height: 20rem;
+  max-width: 20rem;
+  align-self: center;
+}

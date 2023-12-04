@@ -42,7 +42,7 @@ let graphCardList = graphs.map((graphTitle, index) => {
   let column = index % 2 == 0 ? Column.LEFT : Column.RIGHT;
   return (
     <GraphCard
-      id={"" + graphTitle.split(" ").pop()}
+      id={"" + graphTitle.split(" ").join("_").toLowerCase()}
       column={column}
       title={"Number of Programs by " + graphTitle}
     />
