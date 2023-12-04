@@ -4,6 +4,7 @@ import "./globals.css";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,53 +32,55 @@ export default function RootLayout({
   return (
     <html lang="en" className={outfit.className}>
       <body>
-        <section>
-          {/* Include shared UI here e.g. a header or sidebar */}
-          <nav>
-            <div className={styles.header}>
-              <Link href="/">
-                <div className={styles.logo}>
-                  <Image
-                    src="/fknm_logo.png"
-                    alt="FKNM Logo"
-                    width={70}
-                    height={70}
-                    priority
-                  />
-                </div>
-              </Link>
-              <Link href="/">
-                <p>Feeding Kids, Nourishing Minds</p>
-              </Link>
-            </div>
-
-            <div className={styles.navigationbar}>
-              <div className={styles.navigationbarContent}>
-                <Link href="/current_programs/">
-                  <p>Current Programs</p>
-                </Link>
-
-                <div className={styles.researchNavItem}>
-                  Research
-                  <div className={styles.researchMenu}>
-                    <Link href="/intake_visuals/">Intake Visuals</Link>
-                    <Separator />
-                    <Link href="/measurement_tool_assessment/">
-                      Measurement Tool Assessment
-                    </Link>
-                    <Separator />
+        <Providers>
+          <section>
+            {/* Include shared UI here e.g. a header or sidebar */}
+            <nav>
+              <div className={styles.header}>
+                <Link href="/">
+                  <div className={styles.logo}>
+                    <Image
+                      src="/fknm_logo.png"
+                      alt="FKNM Logo"
+                      width={70}
+                      height={70}
+                      priority
+                    />
                   </div>
-                </div>
-
-                <Link href="/current_programs/">News</Link>
-                <Link href="/current_programs/">Publications</Link>
-                <Link href="/about_fknm/">About FKNM</Link>
+                </Link>
+                <Link href="/">
+                  <p>Feeding Kids, Nourishing Minds</p>
+                </Link>
               </div>
-            </div>
-          </nav>
 
-          {children}
-        </section>
+              <div className={styles.navigationbar}>
+                <div className={styles.navigationbarContent}>
+                  <Link href="/current_programs/">
+                    <p>Current Programs</p>
+                  </Link>
+
+                  <div className={styles.researchNavItem}>
+                    Research
+                    <div className={styles.researchMenu}>
+                      <Link href="/intake_visuals/">Intake Visuals</Link>
+                      <Separator />
+                      <Link href="/measurement_tool_assessment/">
+                        Measurement Tool Assessment
+                      </Link>
+                      <Separator />
+                    </div>
+                  </div>
+
+                  <Link href="/current_programs/">News</Link>
+                  <Link href="/current_programs/">Publications</Link>
+                  <Link href="/about_fknm/">About FKNM</Link>
+                </div>
+              </div>
+            </nav>
+
+            {children}
+          </section>
+        </Providers>
       </body>
     </html>
   );
