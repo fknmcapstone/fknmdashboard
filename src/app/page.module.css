@@ -135,11 +135,21 @@ div.blurbContainer p {
 }
 
 .card h3 {
+  grid-row: 1;
   font-weight: 500;
   font-size: var(--subtitle-font-size);
 }
 
+.card div {
+  grid-row: 2;
+  justify-self: center;
+  align-self: bottom;
+}
+
 .card {
+  display: grid;
+  grid-template-rows: 3rem 1rem1fr;
+  grid-template-columns: 1fr;
   color: var(--light-text-color);
   padding: 2rem;
   margin-inline: 5rem;
@@ -176,7 +186,7 @@ div.blurbContainer p {
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
-    background: rgba(22, 76, 140, 0.7);
+    /* background: rgba(22, 76, 140, 0.7); */
   }
 
   .card:hover span {

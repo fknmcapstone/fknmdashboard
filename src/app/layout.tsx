@@ -71,8 +71,8 @@ export default function RootLayout({
                     </div>
                   </div>
 
-                  <Link href="/current_programs/">News</Link>
-                  <Link href="/current_programs/">Publications</Link>
+                  <Link href="/news/">News</Link>
+                  <Link href="/publications/">Publications</Link>
                   <Link href="/about_fknm/">About FKNM</Link>
                 </div>
               </div>

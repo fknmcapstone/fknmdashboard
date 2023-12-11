@@ -21,11 +21,13 @@ function NavigationCard({
   isLeft,
   title,
   link,
+  imageSrc,
 }: {
   isResearchCard: boolean;
   isLeft: boolean;
   title: string;
   link: string;
+  imageSrc: string;
 }) {
   return (
     <Link
@@ -37,12 +39,12 @@ function NavigationCard({
       ].join(" ")}
     >
       <h3>{title}</h3>
-      <div className={styles.logo}>
+      <div>
         <Image
-          src="/fknm_logo.png"
+          src={imageSrc}
           alt="FKNM Logo"
-          width={50}
-          height={50}
+          width={200}
+          height={100}
           priority
         />
       </div>
@@ -86,6 +88,7 @@ export default function Home() {
             link="/current_programs/"
             isResearchCard={false}
             isLeft={false}
+            imageSrc="/card_placeholder_visuals.png"
           />
           <div className={styles.researchCardsContainer}>
             <NavigationCard
@@ -93,12 +96,14 @@ export default function Home() {
               link="/intake_visuals/"
               isResearchCard={true}
               isLeft={true}
+              imageSrc="/card_placeholder_visuals.png"
             />
             <NavigationCard
               title="Measurement Tool Assessment"
               link="/measurement_tool_assessment/"
               isResearchCard={true}
               isLeft={true}
+              imageSrc="/card_placeholder_visuals.png"
             />
           </div>
           <p>
@@ -120,6 +125,7 @@ export default function Home() {
             link="/about_fknm/"
             isResearchCard={false}
             isLeft={false}
+            imageSrc="/card_placeholder_visuals.png"
           />
         </div>
         <Separator />

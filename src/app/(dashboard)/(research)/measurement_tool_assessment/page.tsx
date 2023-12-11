@@ -57,10 +57,7 @@ export default function MeasurementToolAssessment() {
       </div>
       <div id={styles.map}></div>
       <div className={styles.subtext}>
-        <p>
-          Blurb from discussing what is being shown here. Long blurb very l;ong
-          blurb
-        </p>
+        <p>Blurb from discussing what is being shown here. Long blurb</p>
       </div>
       <div className={styles.shortcutMenu}>
         <p className={styles.shortcutMenuTitle}>Shortcuts</p>
