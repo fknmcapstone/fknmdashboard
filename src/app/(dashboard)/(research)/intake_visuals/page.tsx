@@ -19,11 +19,16 @@ function GraphCard({
   id,
   column,
   title,
+  src,
 }: {
   id: string;
   column: Column;
   title: string;
+  src: string[];
 }) {
+  let imgList = src.map((src) => {
+    return [<img src={src}></img>];
+  });
   return (
     <div
       id={id}
@@ -34,6 +39,13 @@ function GraphCard({
       ].join(" ")}
     >
       <p>{!title ? "" : title}</p>
+      <div
+        className={
+          id.includes("legend") ? styles.legendEmbed : styles.chartEmbed
+        }
+      >
+        {imgList}
+      </div>
     </div>
   );
 }
@@ -53,6 +65,25 @@ let graphs: { [title: string]: Column } = {
   "Daily School Macronutrient Intake vs. Recommended Intake": Column.MERGED,
   "Daily School Micronutrient Intake vs. Recommended Intake": Column.MERGED,
   "Meal Components": Column.MERGED,
+};
+
+let graphSources: { [title: string]: string[] } = {
+  "Age Group Legend": ["legend_placeholder.png"],
+  "Daily Macronutrient Intake By Age Group": ["chart_visual_placeholder.png"],
+  "Daily Micronutrient Intake By Age Group": ["chart_visual_placeholder.png"],
+  "Prep Location Legend": [""],
+  "Daily Macronutrient Intake By Prep Location": [""],
+  "Daily Micronutrient Intake By Prep Location": [""],
+  "Age Group and Prep Location Legend": [""],
+  "Daily Macronutrient Intake By Age Group and Prep Location": [""],
+  "Daily Micronutrient Intake By Age Group and Prep Location": [""],
+  "Daily School Energy Intake vs. Recommended Intake": [""],
+  "Daily School Macronutrient Intake vs. Recommended Intake": [""],
+  "Daily School Micronutrient Intake vs. Recommended Intake": [""],
+  "Meal Components": [
+    "meal_component_visual_placeholder.png",
+    "meal_component_visual_placeholder.png",
+  ],
 };
 
 let linkList = Object.keys(graphs).map((graphTitle, index) => {
@@ -90,6 +121,7 @@ let graphCardList = Object.entries(graphs).map(([graphTitle, column]) => {
       }
       column={column}
       title={graphTitle.includes("Legend") ? "" : graphTitle}
+      src={graphSources[graphTitle]}
     />
   );
 });

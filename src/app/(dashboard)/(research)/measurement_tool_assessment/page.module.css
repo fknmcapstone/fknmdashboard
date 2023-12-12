@@ -34,7 +34,9 @@
   max-width: 90rem;
   margin-inline-end: 3rem;
   grid-column: 3 / span 2;
-  background: lightskyblue;
+  height: 90%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .shortcutMenu {
@@ -78,6 +80,8 @@
 }
 
 .card {
+  display: grid;
+  grid-template-rows: 2rem 1fr;
   justify-self: start;
   padding: 2rem;
   margin-top: 2rem;
@@ -90,4 +94,10 @@
   background: white;
   font-weight: 600;
   font-size: var(--subtitle-font-size);
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }

@@ -15,7 +15,8 @@
   height: 70vh;
   margin-inline: 3rem;
   grid-column: 3;
-  background: lightskyblue;
+  width: 90%;
+  object-fit: contain;
 }
 
 #aboutText {

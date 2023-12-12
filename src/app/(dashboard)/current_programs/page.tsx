@@ -67,7 +67,7 @@ export default function CurrentPrograms() {
           </AccordionItem>
         </Accordion>
       </div>
-      <div id={styles.map}></div>
+      <img src="map_placeholder.png" id={styles.map}></img>
     </main>
   );
 }

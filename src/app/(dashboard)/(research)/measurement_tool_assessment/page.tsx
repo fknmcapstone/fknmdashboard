@@ -10,10 +10,12 @@ function GraphCard({
   id,
   column,
   title,
+  src,
 }: {
   id: string;
   column: Column;
   title: string;
+  src: string;
 }) {
   return (
     <div
@@ -24,6 +26,7 @@ function GraphCard({
       ].join(" ")}
     >
       <p>{title}</p>
+      <img src={src}></img>
     </div>
   );
 }
@@ -45,6 +48,7 @@ let graphCardList = graphs.map((graphTitle, index) => {
       id={"" + graphTitle.split(" ").join("_").toLowerCase()}
       column={column}
       title={"Number of Programs by " + graphTitle}
+      src="mta_chart_placeholder.png"
     />
   );
 });
@@ -55,7 +59,8 @@ export default function MeasurementToolAssessment() {
       <div className={styles.title}>
         <p>Measurement Tool Assessment</p>
       </div>
-      <div id={styles.map}></div>
+
+      <img src="map_placeholder.png" id={styles.map}></img>
       <div className={styles.subtext}>
         <p>Blurb from discussing what is being shown here. Long blurb</p>
       </div>

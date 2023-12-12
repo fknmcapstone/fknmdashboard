@@ -52,6 +52,8 @@
 }
 
 .card {
+  display: grid;
+  grid-template-rows: 3rem 1fr;
   margin-bottom: 2rem;
   justify-self: end;
   padding: 2rem;
@@ -64,6 +66,26 @@
   background: white;
   font-weight: 600;
   font-size: var(--subtitle-font-size);
+}
+
+.card .chartEmbed {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  width: 100%;
+  height: 95%;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.columnMerged img {
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
 }
 
 .columnLeft {
@@ -86,7 +108,17 @@
 
 .legend {
   height: 70%;
+  padding: 1rem;
   max-height: 20rem;
   max-width: 20rem;
   align-self: center;
+}
+
+.legend .legendEmbed {
+  grid-row: 1 / span 2;
+}
+
+.legend img {
+  height: 100%;
+  width: 100%;
 }
