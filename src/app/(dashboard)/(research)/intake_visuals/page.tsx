@@ -55,6 +55,7 @@ let graphs: { [title: string]: Column } = {
   "Age Group Legend": Column.LEFT,
   "Daily Macronutrient Intake By Age Group": Column.MIDDLE,
   "Daily Micronutrient Intake By Age Group": Column.RIGHT,
+  "Meal Components": Column.MERGED,
   "Prep Location Legend": Column.LEFT,
   "Daily Macronutrient Intake By Prep Location": Column.MIDDLE,
   "Daily Micronutrient Intake By Prep Location": Column.RIGHT,
@@ -64,7 +65,6 @@ let graphs: { [title: string]: Column } = {
   "Daily School Energy Intake vs. Recommended Intake": Column.MERGED,
   "Daily School Macronutrient Intake vs. Recommended Intake": Column.MERGED,
   "Daily School Micronutrient Intake vs. Recommended Intake": Column.MERGED,
-  "Meal Components": Column.MERGED,
 };
 
 let graphSources: { [title: string]: string[] } = {
