@@ -61,7 +61,7 @@ export default function RootLayout({
 
                   <div className={styles.researchNavItem}>
                     Research
-                    <div className={styles.researchMenu}>
+                    <div className={styles.navBarSubMenu}>
                       <Link href="/intake_visuals/">Intake Visuals</Link>
                       <Separator />
                       <Link href="/measurement_tool_assessment/">
@@ -72,7 +72,15 @@ export default function RootLayout({
                   </div>
 
                   <Link href="/news/">News</Link>
-                  <Link href="/publications/">Publications</Link>
+                  <div className={styles.researchNavItem}>
+                    Publications
+                    <div className={styles.navBarSubMenu}>
+                      <Link href="/manuscripts/">Manuscripts</Link>
+                      <Separator />
+                      <Link href="/presentations/">Presentations</Link>
+                      <Separator />
+                    </div>
+                  </div>
                   <Link href="/about_fknm/">About FKNM</Link>
                 </div>
               </div>

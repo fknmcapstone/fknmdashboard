@@ -6,9 +6,15 @@
   /* Colors */
   --primary-color: #002253;
   --secondary-color: #113f81;
+  --tertiary-color: #cfd9e9;
   --background-color: #efefef;
+  --darker-background-color: #e0e0e0;
   --dark-text-color: black;
   --light-text-color: white;
+  --grey-text-color: #626262;
+  --link--arrow-color: #d32a32;
+  --pagination-dots-unselected: #d9d9d9;
+  --pagination-dots-selected: #8a8a8a;
 
   /* Font sizes */
   --title-font-size: 2rem;
@@ -22,6 +28,7 @@
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   --card-border-radius: 25px;
   --small-card-border-radius: 15px;
+  --small-button-border-radius: 12px;
 }
 
 @media (prefers-color-scheme: light) {

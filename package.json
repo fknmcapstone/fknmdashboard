@@ -11,6 +11,8 @@
   "dependencies": {
     "@nextui-org/accordion": "^2.0.28",
     "@nextui-org/react": "^2.2.9",
+    "embla-carousel-autoplay": "^8.0.0-rc19",
+    "embla-carousel-react": "^8.0.0-rc19",
     "framer-motion": "^10.16.12",
     "next": "14.0.1",
     "react": "^18",

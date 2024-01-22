@@ -1,0 +1,80 @@
+.main {
+  display: grid;
+  background-color: var(--background-color);
+  width: 100%;
+  padding-inline: 10vw;
+  padding-block-end: 5vh;
+  grid-template-rows: 5re 5rem 8rem 5rem 8rem 8rem 5rem 8rem 8rem;
+  grid-template-columns: 1fr 16rem;
+}
+
+.title {
+  grid-row: 1;
+  grid-column: 1;
+  font-size: var(--subtitle-font-size);
+  font-weight: bold;
+  margin-top: 2vh;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  grid-column: 2;
+  grid-row: 1;
+  text-decoration: underline;
+  color: var(--secondary-color);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  width: min-content;
+  padding: 0.5rem 6rem 0.5rem 0.5rem;
+  color: var(--light-text-color);
+  background-color: var(--primary-color);
+  margin-block-start: 2rem;
+  grid-column: 1 / span 2;
+  font-weight: bold;
+}
+
+.item {
+  width: 27%;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  padding: 2rem;
+  color: var(--dark-text-color);
+  background-color: var(--tertiary-color);
+}
+
+.impactsInfo {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: row;
+}
+
+.adaptationsInfoFirst {
+  grid-row: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.adaptationsInfoSecond {
+  grid-row: 6;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.challengesInfoFirst {
+  grid-row: 8;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.challengesInfoSecond {
+  grid-row: 9;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}

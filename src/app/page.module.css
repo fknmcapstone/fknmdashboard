@@ -44,7 +44,7 @@
   margin-inline: 3vw;
 }
 
-.researchMenu {
+.navBarSubMenu {
   line-height: 100%;
   display: none;
   position: relative;
@@ -52,22 +52,22 @@
   z-index: 0;
   height: min-content;
   width: 10rem;
-  height: 8rem;
+  height: fit-content;
   background-color: var(--secondary-color);
   box-shadow: var(--card-shadow);
   border-radius: 0px 0px 10px 10px;
-  padding: 1rem;
+  padding: 0.75rem;
   white-space: normal;
 }
 
-.researchNavItem:hover .researchMenu,
-.researchMenu:hover {
+.researchNavItem:hover .navBarSubMenu,
+.navBarSubMenu:hover {
   position: fixed;
   display: block;
   z-index: 1;
 }
 
-.researchMenu a {
+.navBarSubMenu a {
   margin-left: 0.3rem;
   display: block;
 }
