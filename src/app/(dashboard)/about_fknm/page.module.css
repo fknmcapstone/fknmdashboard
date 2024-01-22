@@ -1,0 +1,181 @@
+.main {
+  display: grid;
+  background-color: var(--background-color);
+  width: 100%;
+  padding-inline: 10vw;
+  padding-block-end: 5vh;
+  grid-template-rows: 5re 5rem 8rem 5rem 8rem 8rem 5rem 8rem 8rem;
+  grid-template-columns: 1fr 16rem;
+  color: var(--dark-text-color);
+}
+
+.title {
+  text-align: center;
+  grid-row: 1;
+  grid-column: 1;
+  font-size: var(--subtitle-font-size);
+  font-weight: bold;
+  margin-top: 2vh;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  grid-column: 2;
+  grid-row: 1;
+  text-decoration: underline;
+  color: var(--secondary-color);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  width: min-content;
+  padding: 0.5rem 6rem 0.5rem 0.5rem;
+  color: var(--light-text-color);
+  grid-column: 1 / span 2;
+  font-weight: bold;
+}
+
+.item {
+  width: 27%;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  padding: 2rem;
+  color: var(--dark-text-color);
+  background-color: var(--tertiary-color);
+}
+
+.impactsInfo {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: row;
+}
+
+.adaptationsInfoFirst {
+  grid-row: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.adaptationsInfoSecond {
+  grid-row: 6;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.challengesInfoFirst {
+  grid-row: 8;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.challengesInfoSecond {
+  grid-row: 9;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.card h3 {
+  grid-row: 1;
+  font-weight: 500;
+  font-size: var(--subtitle-font-size);
+}
+
+.card div {
+  grid-row: 2;
+  justify-self: center;
+  align-self: bottom;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 3rem 1rem1fr;
+  grid-template-columns: 1fr;
+  color: var(--light-text-color);
+  padding: 2rem;
+  margin-inline: 5rem;
+  border-radius: var(--card-border-radius);
+  width: 21rem;
+  height: 16rem;
+  box-shadow: var(--card-shadow);
+  background: var(--secondary-color);
+}
+
+.cardBottomMargin {
+  margin-bottom: 2rem;
+}
+
+.cardRight {
+  justify-self: left;
+}
+
+.cardLeft {
+  justify-self: right;
+}
+
+
+.blurbContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  margin-top: 3rem;
+  width: 65%;
+  color: var(--dark-text-color);
+  align-items: center;
+  justify-self: center;
+}
+
+div.blurbContainer p {
+  padding-bottom: 1rem;
+  font-size: var(--big-paragraph-font-size);
+}
+
+.collabContainer {
+  display: flex;
+  align-items: center;
+  margin-inline: 20rem;
+  justify-content: space-around;
+  justify-self: center;
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.collabCard {
+  margin-top: 1rem;
+  border-radius: var(--small-card-border-radius);
+  display: grid;
+  place-items: center;
+  width: 18rem;
+  height: 4rem;
+  background: var(--secondary-color);
+  box-shadow: var(--card-shadow);
+}
+
+.circularImage {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profileContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Add this line to center items vertically */
+  margin-top: 2rem;
+}
+
+.profileBubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Add this line for centering text */
+}
+
+.profileLabel {
+  color: #002253;
+  margin-top: 0.5rem;
+}
+
