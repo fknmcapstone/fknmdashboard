@@ -41,23 +41,23 @@
   border-radius: var(--card-border-radius);
 }
 
-.embla {
+.carousel {
   overflow: hidden;
   position: relative;
   height: 100%;
 }
-.embla__container {
+.carouselContainer {
   display: flex;
   height: 100%;
 }
-.embla__slide {
+.carouselSlide {
   flex: 0 0 100%;
   display: grid;
   padding-inline: 1vw;
   grid-template-rows: 1fr;
 }
 
-.embla__button__left {
+.prevSVGButton {
   width: 2rem;
   height: 2rem;
   position: absolute;
@@ -66,7 +66,7 @@
   left: 4rem;
 }
 
-.embla__button__right {
+.nextSVGButton {
   width: 2rem;
   height: 2rem;
   position: absolute;
@@ -86,12 +86,6 @@
   display: grid;
   grid-template-rows: min-content min-content;
   align-content: center;
-}
-
-.recentArticleTitleText {
-  grid-row: 1;
-  font-weight: 600;
-  font-size: var(--big-paragraph-font-size);
 }
 
 .recentArticleTitleText {
@@ -128,10 +122,11 @@
   margin-inline-end: 2rem;
   height: 15rem;
   width: 15rem;
+  /* TODO: Remove this color once images are added */
   background-color: #ccf6ff;
 }
 
-.embla__dots {
+.paginationDots {
   height: 1rem;
   bottom: 1rem;
   position: absolute;
@@ -139,7 +134,7 @@
   transform: translateX(-50%);
 }
 
-.embla__dot {
+.paginationDot {
   height: 0.5rem;
   width: 0.5rem;
   margin-inline: 0.2rem;
@@ -147,7 +142,7 @@
   background-color: var(--pagination-dots-unselected);
 }
 
-.embla__dot__selected {
+.paginationDotSelected {
   background-color: var(--pagination-dots-selected);
 }
 
@@ -219,7 +214,7 @@
   font-size: var(--smaller-paragraph-font-size);
 }
 
-.page_numbers {
+.pageNumbers {
   display: flex;
   flex-direction: row;
   height: 6rem;
@@ -230,22 +225,22 @@
   border-bottom: 0.12rem solid var(--pagination-dots-unselected);
 }
 
-.page_number {
+.pageNumber {
   align-self: flex-end;
   margin-inline: 1rem;
   padding-inline: 1rem;
   padding-block-end: 0.5rem;
 }
 
-.page_number:hover {
+.pageNumber:hover {
   border-bottom: 0.12rem solid var(--dark-text-color);
 }
 
-.page_number_selected {
+.pageNumberSelected {
   border-bottom: 0.12rem solid var(--dark-text-color);
 }
 
-.prev_text_button {
+.prevTextButton {
   align-self: flex-end;
   margin-inline-end: 4rem;
   margin-block-end: 0.5rem;
@@ -254,11 +249,11 @@
   color: var(--pagination-dots-selected);
 }
 
-.prev_text_button:disabled {
+.prevTextButton:disabled {
   opacity: 0.3;
 }
 
-.next_text_button {
+.nextTextButton {
   align-self: flex-end;
   margin-block-end: 0.5rem;
   margin-inline-start: 4rem;
@@ -267,6 +262,6 @@
   color: var(--pagination-dots-selected);
 }
 
-.next_text_button:disabled {
+.nextTextButton:disabled {
   opacity: 0.3;
 }
