@@ -54,18 +54,17 @@
 .card {
   display: grid;
   grid-template-rows: 3rem 1fr;
-  margin-bottom: 2rem;
   justify-self: end;
-  padding: 2rem;
-  margin-top: 2rem;
+  /*padding: 1rem;*/
   border-radius: var(--card-border-radius);
   width: 95%;
   max-width: 45rem;
   box-shadow: var(--card-shadow);
-  height: 90%;
+  height: 92%;
   background: white;
   font-weight: 600;
   font-size: var(--subtitle-font-size);
+  color: black;
 }
 
 .card .chartEmbed {
@@ -114,11 +113,22 @@
   align-self: center;
 }
 
+
 .legend .legendEmbed {
   grid-row: 1 / span 2;
+  height: 90%;
+  width: 90%;
 }
 
 .legend img {
-  height: 100%;
-  width: 100%;
+  height: 40%;
+  width: 40%;
+}
+
+.hider {
+  z-index: 1000;
+  height: 56px;
+  transform: translateY(-55px);
+  background-color: rgb(252, 252, 252);
+
 }
