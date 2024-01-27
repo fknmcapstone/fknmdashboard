@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 
-function Separator({ color = "black", height = 3 }) {
+function Separator({ color = "black", height = 2 }) {
   return (
     <hr
       style={{
@@ -17,149 +17,127 @@ function Separator({ color = "black", height = 3 }) {
   );
 }
 
-function NavigationCard({
-  isResearchCard,
-  isLeft,
-  title,
-  link,
-  imageSrc,
-}: {
-  isResearchCard: boolean;
-  isLeft: boolean;
-  title: string;
-  link: string;
-  imageSrc: string;
-}) {
-  return (
-    <Link
-      href={link}
-      className={[
-        styles.card,
-        isResearchCard ? styles.cardBottomMargin : null,
-        isLeft ? styles.cardLeft : styles.cardRight,
-      ].join(" ")}
-    >
-      <h3>{title}</h3>
-      <div>
-        <Image
-          src={imageSrc}
-          alt="FKNM Logo"
-          width={200}
-          height={100}
-          priority
-        />
-      </div>
-    </Link>
-  );
-}
-
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.landingPageContent}>
-        <div className={styles.blurbContainer}>
-          <Image
-            src="/placeholder_visual_landing.png"
-            alt="FKNM Visual"
-            width={500}
-            height={300}
-            priority
-          />
-          <div>
-            <p>
-              Sample text about the dashboard and an explanation as to why this
-              is done and how it started, more text, more words more
-              explanation, some light description
-            </p>
-            <Link id={styles.covid19Link} href="/covid_19_impacts/">
-              Learn more about the impacts of COVID-19
-            </Link>
+        <div className={styles.landingBlurbContainer}>
+          <div className={styles.landingBlurb}>
+            Sample text about the dashboard and an explanation as to why this is
+            done and how it started, more text, more words more explanation,
+            some light description
+            <br />
+            Sample text about the dashboard and an explanation as to why this is
+            done and how it started, more text, more words more explanation,
+            some light description
+          </div>
+
+          <Link href="/covid_19_impacts/" className={styles.covid19Link}>
+            Learn more about the impacts of COVID-19
+          </Link>
+        </div>
+        <div className={styles.researchTitle}>Our Research</div>
+        <div className={styles.researchSection}>
+          <div className={styles.schoolFoodSectionImg}></div>
+          <Link href={"/school_food_programs/"}>
+            <div
+              className={[
+                styles.sectionTitleLinkContainer,
+                styles.sectionTitle,
+                styles.sectionLink,
+              ].join(" ")}
+            >
+              {"School Food Programs"}
+              <svg className={styles.linkArrow} viewBox="0 -100 800 600">
+                <path
+                  fill="#d32a32"
+                  d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+                  stroke="#d32a32"
+                  stroke-width="100"
+                />
+              </svg>
+            </div>
+          </Link>
+          <div className={styles.sectionBlurb}>
+            Sample text about what this page will show you. More on Current
+            programs and things you can possibly learn Sample text about what
+            this page will show you. More on Current programs and things you can
+            possibly learn Sample text about what this page will show you. More
+            on Current programs and things you can possibly learn{" "}
           </div>
         </div>
+        <div className={styles.researchSection}>
+          <div className={styles.researchSectionImg}></div>
 
-        <Separator />
-
-        <div className={styles.navigationCardsContainer}>
-          <p>
-            Sample text about what this page will show you. More on Current
-            programs and things you can possibly learn whooooo
-          </p>
-          <NavigationCard
-            title="Current Programs"
-            link="/current_programs/"
-            isResearchCard={false}
-            isLeft={false}
-            imageSrc="/card_placeholder_visuals.png"
-          />
-          <div className={styles.researchCardsContainer}>
-            <NavigationCard
-              title="Intake Visuals"
-              link="/intake_visuals/"
-              isResearchCard={true}
-              isLeft={true}
-              imageSrc="/card_placeholder_visuals.png"
-            />
-            <NavigationCard
-              title="Measurement Tool Assessment"
-              link="/measurement_tool_assessment/"
-              isResearchCard={true}
-              isLeft={true}
-              imageSrc="/card_placeholder_visuals.png"
-            />
+          <div className={[styles.sectionTitleLinkContainer].join(" ")}>
+            <p className={styles.sectionTitle}>Research</p>
+            <Link href={"/intake_visuals/"}>
+              <p className={styles.sectionLink}>
+                {"Intake Visuals "}
+                <svg className={styles.linkArrow} viewBox="0 -100 800 600">
+                  <path
+                    fill="#d32a32"
+                    d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+                    stroke="#d32a32"
+                    stroke-width="100"
+                  />
+                </svg>
+              </p>
+            </Link>
+            <Link href={"/measurement_tool_assessment/"}>
+              <p className={styles.sectionLink}>
+                {"Measurement Tool Assessment "}
+                <svg className={styles.linkArrow} viewBox="0 -100 800 600">
+                  <path
+                    fill="#d32a32"
+                    d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+                    stroke="#d32a32"
+                    stroke-width="100"
+                  />
+                </svg>
+              </p>
+            </Link>
           </div>
-          <p>
-            Sample text about what this page will show you. More on research
-            used in this project and on relevant programs Sample text about what
-            this page will show you. More on research used in this project and
-            on relevant programs Sample text about what this page will show you.
-            More on research used in this project and on relevant programs
-            Sample text about what this page will show you. More on research
-            used in this project and on relevant programs
-          </p>
 
-          <p>
-            Sample text about what this page will show you. Learn more about
-            where the data came from and more about the team too
-          </p>
-          <NavigationCard
-            title="About Us"
-            link="/about_fknm/"
-            isResearchCard={false}
-            isLeft={false}
-            imageSrc="/card_placeholder_visuals.png"
-          />
+          <div className={styles.sectionBlurb}>
+            Sample text about what this page will show you. More on Current
+            programs and things you can possibly learn Sample text about what
+            this page will show you. More on Current programs and things you can
+            possibly learn Sample text about what this page will show you. More
+            on Current programs and things you can possibly learn{" "}
+          </div>
         </div>
         <Separator />
         <div className={styles.collabContainer}>
-          <p>In collaboration with:</p>
-          <div>
-            <p>Centre for Child Nutrition</p>
-            <a href="https://childnutrition.utoronto.ca/" target="_blank">
-              <div className={styles.collabCard}>
-                <Image
-                  src="/centre_child_nutrition_placeholder_logo.png"
-                  alt="Centre for Child Nutrition logo"
-                  width={280}
-                  height={50}
-                  priority
-                />
-              </div>
-            </a>
-          </div>
-          <div>
-            <p>Centre for Global Engineering</p>
-            <a href="https://cgen.utoronto.ca/" target="_blank">
-              <div className={styles.collabCard}>
-                <Image
-                  src="/UofT_engineering_placeholder_logo.png"
-                  alt="Centre for Child Nutrition logo"
-                  width={280}
-                  height={50}
-                  priority
-                />
-              </div>
-            </a>
-          </div>
+          <div className={styles.collabText}>In collaboration with:</div>
+          <Image
+            className={styles.logo}
+            src="/Lawson_logo.png"
+            alt={""}
+            width="350"
+            height="300"
+          ></Image>
+          <Image
+            className={styles.logo}
+            src="/CGEN_UT_Signature_P655_RGB.png"
+            alt={""}
+            width="400"
+            height="300"
+          ></Image>
+          <Image
+            className={styles.logo}
+            src="/ECE_UT_Signature_P655_RGB.png"
+            alt={""}
+            width="310"
+            height="300"
+          ></Image>
+          <Image
+            className={styles.logo}
+            src="/FASE_UT_Signature_RGB_P655_RGB.png"
+            alt={""}
+            width="400"
+            height="300"
+          ></Image>
         </div>
       </div>
     </main>

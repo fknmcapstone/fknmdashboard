@@ -25,10 +25,11 @@
 
   /* Card properties */
   --card-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    0 3px 20px 0 rgba(0, 0, 0, 0.19);
   --card-border-radius: 25px;
   --small-card-border-radius: 15px;
   --small-button-border-radius: 12px;
+  --blurb-border-radius: 10px;
 }
 
 @media (prefers-color-scheme: light) {

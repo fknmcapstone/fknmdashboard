@@ -38,7 +38,7 @@ export default function RootLayout({
             <nav>
               <div className={styles.header}>
                 <Link href="/">
-                  <div className={styles.logo}>
+                  <div className={styles.headerLogo}>
                     <Image
                       src="/fknm_logo.png"
                       alt="FKNM Logo"
@@ -55,8 +55,8 @@ export default function RootLayout({
 
               <div className={styles.navigationbar}>
                 <div className={styles.navigationbarContent}>
-                  <Link href="/current_programs/">
-                    <p>Current Programs</p>
+                  <Link href="/school_food_programs/">
+                    <p>School Food Programs</p>
                   </Link>
 
                   <div className={styles.researchNavItem}>

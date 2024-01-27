@@ -56,28 +56,28 @@ export const RecentNewsCarousel = () => {
     <div className={styles.carousel} ref={emblaRef}>
       <div className={styles.carouselContainer}>
         <RecentArticle
-          title="Article Title Here, Might be Long as Well From the university of toronto"
+          title="Long Long Article Title Here From the University of Toronto"
           image=""
           link="www.google.com"
           date="Jan 5, 2024"
         ></RecentArticle>
 
         <RecentArticle
-          title="Article Title Here, Might be really really long as Well From the university of toronto"
+          title="Long Long Article Title Here From the University of Toronto 2"
           image=""
           link="www.google.com"
           date="Jan 5, 2024"
         ></RecentArticle>
 
         <RecentArticle
-          title="Article next title Here, Might be Long as Well From the university of toronto"
+          title="Long Long Article Title Here From the University of Toronto 3"
           image=""
           link="www.google.com"
           date="Jan 5, 2024"
         ></RecentArticle>
 
         <RecentArticle
-          title="Article schmeagle Here, Might be Long as Well From the university of toronto"
+          title="Long Long Article Title Here From the University of Toronto 4"
           image=""
           link="www.google.com"
           date="Jan 5, 2024"
@@ -152,7 +152,7 @@ export const AllNewsCarousel = () => {
           <div className={styles.allNewsArticles}>
             {[0, 1, 2, 3, 4, 5].map((_, index) => (
               <Article
-                title="Article schmeagle Here, Might be Long as Well From the of toronto"
+                title="Long Long Article Title Here From the University of Toronto"
                 image=""
                 link="www.google.com"
                 date="Jan 5, 2024"
@@ -160,11 +160,11 @@ export const AllNewsCarousel = () => {
             ))}
           </div>
         </div>
-        <div className={styles.embla__slide}>
+        <div className={styles.carouselSlide}>
           <div className={styles.allNewsArticles}>
             {[0, 1, 2, 3, 4, 5].map((_, index) => (
               <Article
-                title="Article schmeagle Here, Might be Long as Well From the of toronto"
+                title="Long Long Article Title Here From the University of Toronto"
                 image=""
                 link="www.google.com"
                 date="Jan 5, 2024"
@@ -172,11 +172,11 @@ export const AllNewsCarousel = () => {
             ))}
           </div>
         </div>
-        <div className={styles.embla__slide}>
+        <div className={styles.carouselSlide}>
           <div className={styles.allNewsArticles}>
             {[0, 1, 2, 3].map((_, index) => (
               <Article
-                title="Article schmeagle Here, Might be Long as Well From the of toronto"
+                title="Long Long Article Title Here From the University of Toronto"
                 image=""
                 link="www.google.com"
                 date="Jan 5, 2024"
