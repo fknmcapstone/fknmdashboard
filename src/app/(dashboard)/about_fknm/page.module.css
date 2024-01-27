@@ -1,96 +1,39 @@
 .main {
   display: grid;
-  grid-template-areas:
-    "heading1 heading1"
-    "cards cards"
-    "intro1 intro1"
-    "heading2 heading2"
-    "intro2 intro2"
-    "heading3 heading3"
-    "accordion accordion"
-    "seperator seperator"
-    "collabContainer collabContainer"
-    ;
   background-color: var(--background-color);
   width: 100%;
-  padding-inline: 10vw;
+  height: 100%;
   padding-block-end: 5vh;
-  grid-template-rows: 5rem auto; /* Auto will fill the remaining space */
-  grid-template-columns: 1fr 16rem;
+  grid-template-rows: auto;
   color: var(--dark-text-color);
 }
 
-.heading1 {
-  grid-area: heading1;
+.heading {
   text-align: center;
   font-size: var(--subtitle-font-size);
   font-weight: bold;
-  margin-top: 2vh;
+  margin-top: 4rem;
 }
 
-.cards {
-  grid-area: cards;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  background-color: var(--tertiary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 8px;
-}
-
-
-.intro1 {
-  grid-area: intro1;
+.textContent {
+  width: 70rem;
+  justify-self: center;
   text-align: left;
-  font-size: var(--big-paragraph-font-size);
+  font-size: var(--small-paragraph-font-size);
   margin-top: 2vh;
 }
-
-
-.heading2 {
-  grid-area: heading2;
-  text-align: center;
-  font-size: var(--subtitle-font-size);
-  font-weight: bold;
-  margin-top: 3vh;
-}
-
-
-.intro2 {
-  grid-area: intro2;
-  text-align: left;
-  font-size: var(--big-paragraph-font-size);
-  margin-top: 2vh;
-}
-
-
-.heading3 {
-  grid-area: heading3;
-  text-align: center;
-  font-size: calc(var(--subtitle-font-size) + 3px);
-  font-weight: bold;
-  margin-top: 5vh;
-  margin-bottom: 2vh;
-}
-
 
 .accordion {
-  grid-area: accordion;
-  margin-bottom: 2vh;
+  margin-block-start: 2rem;
+  width: 80rem;
+  justify-self: center;
 }
 
-.accordionItem
-{
+.accordionItem {
   background-color: #ebe9e9 !important;
 }
 
-.popover
-{
+.popover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   flex-direction: row;
@@ -100,32 +43,39 @@
   align-content: space-around;
 }
 
-.popoverContent
-{
+.popoverContent {
   color: black !important;
 }
 
-.popoverTrigger
-{
-  padding:1dvh;
+.popoverTrigger {
+  padding: 1dvh;
   width: auto;
   height: auto;
   flex-direction: column;
 }
 
-.seperator
-{
-  grid-area: seperator;
+.collabContainer {
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 15rem max-content max-content;
+  grid-template-rows: max-content max-content;
 }
 
-.collabContainer
-{
-  grid-area: collabContainer;
+.collabText {
+  grid-row: span 2;
   display: flex;
-  align-items: center;
-  margin-inline: 20rem;
-  justify-content: space-around;
-  justify-self: center;
-  width: 70%;
-  margin-bottom: 2rem;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  font-size: var(--small-paragraph-font-size);
+}
+
+.logo {
+  justify-self: start;
+  align-self: center;
+  margin: 0.5rem;
+  border-radius: var(--card-border-radius);
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 1rem;
+  box-shadow: var(--card-shadow);
 }

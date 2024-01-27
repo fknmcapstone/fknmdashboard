@@ -3,7 +3,7 @@
   height: 100%;
   justify-content: center;
   background-color: var(--background-color);
-  padding-block-end: 5rem;
+  padding-block-end: 3rem;
 }
 
 .header {

@@ -9,7 +9,8 @@ function Separator({ color = "black", height = 2 }) {
       style={{
         backgroundColor: "#002253",
         marginInline: "10rem",
-        marginBlock: "4rem",
+        marginBlockStart: "4rem",
+        marginBlockEnd: "1rem",
         height: height,
         border: "none",
       }}
@@ -110,34 +111,58 @@ export default function Home() {
         <Separator />
         <div className={styles.collabContainer}>
           <div className={styles.collabText}>In collaboration with:</div>
-          <Image
-            className={styles.logo}
-            src="/Lawson_logo.png"
-            alt={""}
-            width="350"
-            height="300"
-          ></Image>
-          <Image
-            className={styles.logo}
-            src="/CGEN_UT_Signature_P655_RGB.png"
-            alt={""}
-            width="400"
-            height="300"
-          ></Image>
-          <Image
-            className={styles.logo}
-            src="/ECE_UT_Signature_P655_RGB.png"
-            alt={""}
-            width="310"
-            height="300"
-          ></Image>
-          <Image
-            className={styles.logo}
-            src="/FASE_UT_Signature_RGB_P655_RGB.png"
-            alt={""}
-            width="400"
-            height="300"
-          ></Image>
+          <a
+            href="https://childnutrition.utoronto.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className={styles.logo}
+              src="/Lawson_logo.png"
+              alt={""}
+              width="350"
+              height="300"
+            ></Image>
+          </a>
+          <a
+            href="https://cgen.utoronto.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className={styles.logo}
+              src="/CGEN_UT_Signature_P655_RGB.png"
+              alt={""}
+              width="400"
+              height="300"
+            ></Image>
+          </a>
+          <a
+            href="https://www.ece.utoronto.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className={styles.logo}
+              src="/ECE_UT_Signature_P655_RGB.png"
+              alt={""}
+              width="310"
+              height="300"
+            ></Image>
+          </a>
+          <a
+            href="https://www.engineering.utoronto.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className={styles.logo}
+              src="/FASE_UT_Signature_RGB_P655_RGB.png"
+              alt={""}
+              width="400"
+              height="300"
+            ></Image>
+          </a>
         </div>
       </div>
     </main>
