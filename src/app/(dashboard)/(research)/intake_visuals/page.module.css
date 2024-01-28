@@ -52,12 +52,6 @@
   font-size: var(--small-paragraph-font-size);
 }
 
-.Fixed {
-  position: fixed;
-  top: 10rem;
-  left: 1rem;
-}
-
 .chartColumn {
   justify-self: center;
   transform: translateX(23%);
@@ -91,4 +85,16 @@
   border-radius: 100px;
   width: 15px;
   height: 15px;
+}
+
+.returnToTopButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: var(--card-shadow);
+  z-index: 1;
 }

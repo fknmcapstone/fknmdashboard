@@ -50,9 +50,8 @@
   line-height: 100%;
   display: none;
   position: absolute;
-  top: 125%;
+  top: 110%;
   transform: translateX(-25%);
-  z-index: 0;
   height: min-content;
   width: 10rem;
   height: fit-content;
