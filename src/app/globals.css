@@ -15,6 +15,9 @@
   --link-arrow-color: #d32a32;
   --pagination-dots-unselected: #d9d9d9;
   --pagination-dots-selected: #8a8a8a;
+  --covid-blue: #007fad;
+  --covid-green: #008572;
+  --covid-red: #d36363;
 
   /* Font sizes */
   --title-font-size: 2rem;

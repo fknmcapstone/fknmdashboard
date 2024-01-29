@@ -2,79 +2,91 @@
   display: grid;
   background-color: var(--background-color);
   width: 100%;
-  padding-inline: 10vw;
   padding-block-end: 5vh;
-  grid-template-rows: 5re 5rem 8rem 5rem 8rem 8rem 5rem 8rem 8rem;
-  grid-template-columns: 1fr 16rem;
+  grid-template-columns: 50rem 50rem;
+  justify-content: center;
+  column-gap: 2rem;
 }
 
 .title {
-  grid-row: 1;
-  grid-column: 1;
   font-size: var(--subtitle-font-size);
   font-weight: bold;
   margin-top: 2vh;
+  text-align: center;
 }
 
-.link {
-  display: flex;
-  flex-direction: row;
-  grid-column: 2;
-  grid-row: 1;
-  text-decoration: underline;
-  color: var(--secondary-color);
-  align-items: center;
-  justify-content: space-between;
-}
+.horizontalInfoBox {
+  margin-block-start: 3rem;
 
-.header {
-  width: min-content;
-  padding: 0.5rem 6rem 0.5rem 0.5rem;
+  height: 20rem;
+  width: 60%;
+  display: grid;
+  grid-template-rows: 4rem 1fr;
+  grid-template-columns: 1fr 1fr;
   color: var(--light-text-color);
-  background-color: var(--primary-color);
-  margin-block-start: 2rem;
-  grid-column: 1 / span 2;
-  font-weight: bold;
-}
-
-.item {
-  width: 27%;
-  margin: 0.5rem 0.5rem 0.5rem 0;
   padding: 2rem;
-  color: var(--dark-text-color);
-  background-color: var(--tertiary-color);
+  border-radius: var(--blurb-border-radius);
 }
 
-.impactsInfo {
-  grid-row: 3;
-  grid-column: 1 / span 2;
-  display: flex;
-  flex-direction: row;
+.impactCOVID19Box {
+  width: 80%;
 }
 
-.adaptationsInfoFirst {
-  grid-row: 5;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+.spanBothColumns {
+  grid-column: span 2;
 }
-.adaptationsInfoSecond {
-  grid-row: 6;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+.backgroundBlue {
+  background-color: var(--covid-blue);
 }
 
-.challengesInfoFirst {
-  grid-row: 8;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+.backgroundGreen {
+  background-color: var(--covid-green);
 }
 
-.challengesInfoSecond {
-  grid-row: 9;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+.backgroundRed {
+  background-color: var(--covid-red);
+}
+
+.verticalInfoBox {
+  height: max-content;
+  width: 55%;
+  display: grid;
+  padding: 2rem;
+  color: var(--light-text-color);
+  margin-block-start: 2rem;
+  border-radius: var(--blurb-border-radius);
+  justify-content: center;
+  row-gap: 2rem;
+  grid-auto-rows: max-content;
+}
+
+.rightAlign {
+  justify-self: end;
+}
+
+.leftAlign {
+  justify-self: start;
+}
+
+.centerAlign {
+  justify-self: center;
+}
+
+.infoHeader {
+  font-weight: 500;
+  font-size: var(--big-paragraph-font-size);
+}
+
+.infoText {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  width: 25rem;
+  border-radius: var(--blurb-border-radius);
+  font-size: var(--small-paragraph-font-size);
+  text-align: left;
+  place-self: center;
+}
+
+.verticalInfoWidth {
+  width: 20rem;
 }
