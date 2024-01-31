@@ -120,10 +120,10 @@
   justify-self: end;
   align-self: center;
   margin-inline-end: 2rem;
-  height: 15rem;
-  width: 15rem;
-  /* TODO: Remove this color once images are added */
-  background-color: #ccf6ff;
+  height: 18rem;
+  width: 18rem;
+  display: grid;
+  place-content: center;
 }
 
 .paginationDots {
@@ -169,7 +169,7 @@
 .article {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 3rem;
+  margin: 2rem;
 }
 
 .articleImage {
@@ -177,14 +177,16 @@
   justify-self: end;
   align-self: center;
   margin-inline-end: 1rem;
-  height: 8rem;
-  width: 8rem;
-  background-color: #ccf6ff;
+  height: 10rem;
+  width: 10rem;
+  display: grid;
+  place-content: center;
 }
 
 .articleTitle {
   grid-column: 2;
   display: grid;
+  align-self: center;
   grid-template-rows: min-content 1fr;
 }
 

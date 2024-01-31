@@ -55,16 +55,15 @@ export function citationsList(sources: {
             ].join(" ")}
           >
             {sourceList[sourceIndex].citation}{" "}
-            {
+            {sourceList[sourceIndex].link ? (
               <Link
                 href={sourceList[sourceIndex].link}
                 className={styles.citationLink}
                 target="_blank"
               >
-                View Online
+                {sourceList[sourceIndex].link}
               </Link>
-            }
-            {"."}
+            ) : null}
           </div>
         );
       }

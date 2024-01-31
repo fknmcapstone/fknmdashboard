@@ -12,6 +12,8 @@ import {
   RecentArticle,
 } from "./article_widgets_buttons";
 
+import data from "./articles.json";
+
 export const RecentNewsCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
@@ -52,37 +54,20 @@ export const RecentNewsCarousel = () => {
     emblaApi.on("select", onSelect);
   }, [emblaApi, onInit, onSelect]);
 
+  let articles = Object.values(data.recent_articles).map((article) => {
+    return [
+      <RecentArticle
+        title={article.title}
+        image={article.image}
+        link={article.link}
+        date={article.date}
+      />,
+    ];
+  });
+
   return (
     <div className={styles.carousel} ref={emblaRef}>
-      <div className={styles.carouselContainer}>
-        <RecentArticle
-          title="Long Long Article Title Here From the University of Toronto"
-          image=""
-          link="www.google.com"
-          date="Jan 5, 2024"
-        ></RecentArticle>
-
-        <RecentArticle
-          title="Long Long Article Title Here From the University of Toronto 2"
-          image=""
-          link="www.google.com"
-          date="Jan 5, 2024"
-        ></RecentArticle>
-
-        <RecentArticle
-          title="Long Long Article Title Here From the University of Toronto 3"
-          image=""
-          link="www.google.com"
-          date="Jan 5, 2024"
-        ></RecentArticle>
-
-        <RecentArticle
-          title="Long Long Article Title Here From the University of Toronto 4"
-          image=""
-          link="www.google.com"
-          date="Jan 5, 2024"
-        ></RecentArticle>
-      </div>
+      <div className={styles.carouselContainer}>{articles}</div>
       <p className={[styles.cardTitle, styles.recentNewsTitle].join(" ")}>
         Recent News
       </p>
@@ -145,46 +130,32 @@ export const AllNewsCarousel = () => {
     emblaApi.on("select", onSelect);
   }, [emblaApi, onInit, onSelect]);
 
+  let articles = Object.values(data.all_articles).map((article) => {
+    return [
+      <Article
+        title={article.title}
+        image={article.image}
+        link={article.link}
+        date={article.date}
+      />,
+    ];
+  });
+
+  // TODO: Have this number per page change based on screen size
+  let carouselSlides = [];
+  const articlesPerPage = 6;
+  for (let i = 0; i < articles.length; i += articlesPerPage) {
+    const articlesInPage = articles.slice(i, i + articlesPerPage);
+    carouselSlides.push(
+      <div className={styles.carouselSlide}>
+        <div className={styles.allNewsArticles}>{articlesInPage}</div>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.carousel} ref={emblaRef}>
-      <div className={styles.carouselContainer}>
-        <div className={styles.carouselSlide}>
-          <div className={styles.allNewsArticles}>
-            {[0, 1, 2, 3, 4, 5].map((_, index) => (
-              <Article
-                title="Long Long Article Title Here From the University of Toronto"
-                image=""
-                link="www.google.com"
-                date="Jan 5, 2024"
-              ></Article>
-            ))}
-          </div>
-        </div>
-        <div className={styles.carouselSlide}>
-          <div className={styles.allNewsArticles}>
-            {[0, 1, 2, 3, 4, 5].map((_, index) => (
-              <Article
-                title="Long Long Article Title Here From the University of Toronto"
-                image=""
-                link="www.google.com"
-                date="Jan 5, 2024"
-              ></Article>
-            ))}
-          </div>
-        </div>
-        <div className={styles.carouselSlide}>
-          <div className={styles.allNewsArticles}>
-            {[0, 1, 2, 3].map((_, index) => (
-              <Article
-                title="Long Long Article Title Here From the University of Toronto"
-                image=""
-                link="www.google.com"
-                date="Jan 5, 2024"
-              ></Article>
-            ))}
-          </div>
-        </div>
-      </div>
+      <div className={styles.carouselContainer}>{carouselSlides}</div>
 
       <div className={styles.pageNumbers}>
         <PrevButton

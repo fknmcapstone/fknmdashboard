@@ -2,7 +2,7 @@
   display: grid;
   background-color: var(--background-color);
   width: 100%;
-  padding-inline: 10vw;
+  padding-inline: 20vw;
   padding-block-end: 5vw;
 
   grid-template-columns: 1fr;
