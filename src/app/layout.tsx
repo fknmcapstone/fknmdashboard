@@ -36,9 +36,9 @@ export default function RootLayout({
           <section>
             {/* Include shared UI here e.g. a header or sidebar */}
             <nav>
-              <div className={styles.header}>
+              <div id="header" className={styles.header}>
                 <Link href="/">
-                  <div className={styles.headerLogo}>
+                  <div id="header_logo" className={styles.headerLogo}>
                     <Image
                       src="/fknm_logo.png"
                       alt="FKNM Logo"
@@ -48,40 +48,62 @@ export default function RootLayout({
                     />
                   </div>
                 </Link>
-                <Link href="/">
+                <Link id="header_title" href="/">
                   <p>Feeding Kids, Nourishing Minds</p>
                 </Link>
               </div>
 
-              <div className={styles.navigationbar}>
+              <div id="nav_bar" className={styles.navigationbar}>
                 <div className={styles.navigationbarContent}>
-                  <Link href="/school_food_programs/">
+                  <Link
+                    id="nav_school_food_programs"
+                    href="/school_food_programs/"
+                  >
                     <p>School Food Programs</p>
                   </Link>
 
-                  <div className={styles.researchNavItem}>
+                  <div id="nav_research" className={styles.researchNavItem}>
                     Research
-                    <div className={styles.navBarSubMenu}>
-                      <Link href="/intake_visuals/">Intake Visuals</Link>
+                    <div
+                      id="nav_research_submenu"
+                      className={styles.navBarSubMenu}
+                    >
+                      <Link id="nav_intake_visuals" href="/intake_visuals/">
+                        Intake Visuals
+                      </Link>
                       <Separator />
-                      <Link href="/measurement_tool_assessment/">
+                      <Link
+                        id="nav_measurement_tool_assessment"
+                        href="/measurement_tool_assessment/"
+                      >
                         Measurement Tool Assessment
                       </Link>
                       <Separator />
                     </div>
                   </div>
 
-                  <Link href="/news/">News</Link>
-                  <div className={styles.researchNavItem}>
+                  <Link id="nav_news" href="/news/">
+                    News
+                  </Link>
+                  <div id="nav_publications" className={styles.researchNavItem}>
                     Publications
-                    <div className={styles.navBarSubMenu}>
-                      <Link href="/manuscripts/">Manuscripts</Link>
+                    <div
+                      id="nav_publications_submenu"
+                      className={styles.navBarSubMenu}
+                    >
+                      <Link id="nav_manuscripts" href="/manuscripts/">
+                        Manuscripts
+                      </Link>
                       <Separator />
-                      <Link href="/presentations/">Presentations</Link>
+                      <Link id="nav_presentations" href="/presentations/">
+                        Presentations
+                      </Link>
                       <Separator />
                     </div>
                   </div>
-                  <Link href="/about_fknm/">About FKNM</Link>
+                  <Link id="nav_about_fknm" href="/about_fknm/">
+                    About FKNM
+                  </Link>
                 </div>
               </div>
             </nav>
