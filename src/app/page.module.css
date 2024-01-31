@@ -26,9 +26,9 @@
 }
 
 .navigationbar {
-  height: 2.5rem;
+  height: 3rem;
   display: flex;
-  font-size: var(--smaller-paragraph-font-size);
+  font-size: var(--small-paragraph-font-size);
   justify-content: space-around;
   background-color: var(--secondary-color);
   place-items: center;
@@ -50,15 +50,15 @@
   line-height: 100%;
   display: none;
   position: absolute;
-  top: 110%;
+  top: 100%;
   transform: translateX(-25%);
   height: min-content;
-  width: 10rem;
+  width: 12rem;
   height: fit-content;
   background-color: var(--secondary-color);
   box-shadow: var(--card-shadow);
   border-radius: 0px 0px 10px 10px;
-  padding: 0.75rem;
+  padding: 1rem;
   white-space: normal;
 }
 .researchNavItem {
@@ -213,22 +213,11 @@
 .collabContainer {
   justify-self: center;
   grid-row: 6;
-  display: grid;
-  grid-template-columns: 15rem max-content max-content;
-  grid-template-rows: max-content max-content;
-}
-
-.collabText {
-  grid-row: span 2;
   display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  font-size: var(--small-paragraph-font-size);
+  flex-direction: row;
 }
 
 .logo {
-  justify-self: start;
   align-self: center;
   margin: 0.5rem;
   border-radius: var(--card-border-radius);

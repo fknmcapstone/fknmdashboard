@@ -56,22 +56,11 @@
 
 .collabContainer {
   justify-self: center;
-  display: grid;
-  grid-template-columns: 15rem max-content max-content;
-  grid-template-rows: max-content max-content;
-}
-
-.collabText {
-  grid-row: span 2;
   display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  font-size: var(--small-paragraph-font-size);
+  flex-direction: row;
 }
 
 .logo {
-  justify-self: start;
   align-self: center;
   margin: 0.5rem;
   border-radius: var(--card-border-radius);

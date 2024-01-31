@@ -110,7 +110,6 @@ export default function Home() {
         </div>
         <Separator />
         <div className={styles.collabContainer}>
-          <div className={styles.collabText}>In collaboration with:</div>
           <a
             href="https://childnutrition.utoronto.ca/"
             target="_blank"
@@ -120,7 +119,7 @@ export default function Home() {
               className={styles.logo}
               src="/Lawson_logo.png"
               alt={""}
-              width="350"
+              width="300"
               height="300"
             ></Image>
           </a>
@@ -133,7 +132,7 @@ export default function Home() {
               className={styles.logo}
               src="/CGEN_UT_Signature_P655_RGB.png"
               alt={""}
-              width="400"
+              width="300"
               height="300"
             ></Image>
           </a>
@@ -146,7 +145,7 @@ export default function Home() {
               className={styles.logo}
               src="/ECE_UT_Signature_P655_RGB.png"
               alt={""}
-              width="310"
+              width="300"
               height="300"
             ></Image>
           </a>
@@ -159,7 +158,7 @@ export default function Home() {
               className={styles.logo}
               src="/FASE_UT_Signature_RGB_P655_RGB.png"
               alt={""}
-              width="400"
+              width="300"
               height="300"
             ></Image>
           </a>
