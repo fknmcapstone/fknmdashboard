@@ -23,7 +23,7 @@ export function yearBtnList(sources: {
     .reverse()
     .map((year) => {
       return (
-        <Link href={"#year_" + year} className={styles.yearBtn}>
+        <Link key={year} href={"#year_" + year} className={styles.yearBtn}>
           {year}
         </Link>
       );
@@ -38,7 +38,11 @@ export function citationsList(sources: {
     .map(([year, sourceList]) => {
       var manuscriptList = [];
       manuscriptList.push(
-        <div id={"year_" + year} className={styles.yearHeader}>
+        <div
+          key={"year_" + year}
+          id={"year_" + year}
+          className={styles.yearHeader}
+        >
           {year}
         </div>
       );
@@ -46,6 +50,7 @@ export function citationsList(sources: {
       for (var sourceIndex in sourceList) {
         manuscriptList.push(
           <div
+            key={year + sourceIndex}
             className={[
               styles.citation,
               sourceIndex % 2 == 0

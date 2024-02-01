@@ -13,7 +13,9 @@ let sources: { [key: string]: { [key: string]: string }[] } = sortPublications(
 export default function Presentations() {
   return (
     <main className={styles.main}>
-      <p className={styles.publicationsTitle}>Presentations</p>
+      <p id="presentations_title" className={styles.publicationsTitle}>
+        Presentations
+      </p>
       <div className={styles.yearBtnList}>{yearBtnList(sources)}</div>
       {citationsList(sources)}
     </main>
