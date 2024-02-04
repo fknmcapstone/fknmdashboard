@@ -126,7 +126,7 @@
   place-content: center;
 }
 
-.paginationDots {
+.paginationAllDots {
   height: 1rem;
   bottom: 1rem;
   position: absolute;
@@ -142,7 +142,7 @@
   background-color: var(--pagination-dots-unselected);
 }
 
-.paginationDotSelected {
+.paginationSelectedDot {
   background-color: var(--pagination-dots-selected);
 }
 
@@ -216,7 +216,7 @@
   font-size: var(--smaller-paragraph-font-size);
 }
 
-.pageNumbers {
+.pageAllNumbers {
   display: flex;
   flex-direction: row;
   height: 6rem;
@@ -238,7 +238,7 @@
   border-bottom: 0.12rem solid var(--dark-text-color);
 }
 
-.pageNumberSelected {
+.pageSelectedNumber {
   border-bottom: 0.12rem solid var(--dark-text-color);
 }
 

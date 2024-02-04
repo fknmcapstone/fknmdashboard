@@ -13,7 +13,7 @@ let sources: { [key: string]: { [key: string]: string }[] } = sortPublications(
 export default function Presentations() {
   return (
     <main className={styles.main}>
-      <p id="presentations_title" className={styles.publicationsTitle}>
+      <p data-cy="presentations_title" className={styles.publicationsTitle}>
         Presentations
       </p>
       <div className={styles.yearBtnList}>{yearBtnList(sources)}</div>

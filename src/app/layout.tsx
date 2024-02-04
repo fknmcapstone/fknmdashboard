@@ -36,9 +36,9 @@ export default function RootLayout({
           <section>
             {/* Include shared UI here e.g. a header or sidebar */}
             <nav>
-              <div id="header" className={styles.header}>
+              <div data-cy="header" className={styles.header}>
                 <Link href="/">
-                  <div id="header_logo" className={styles.headerLogo}>
+                  <div data-cy="header_logo" className={styles.headerLogo}>
                     <Image
                       src="/fknm_logo.png"
                       alt="FKNM Logo"
@@ -48,32 +48,38 @@ export default function RootLayout({
                     />
                   </div>
                 </Link>
-                <Link id="header_title" href="/">
+                <Link data-cy="header_title" href="/">
                   <p>Feeding Kids, Nourishing Minds</p>
                 </Link>
               </div>
 
-              <div id="nav_bar" className={styles.navigationbar}>
+              <div data-cy="nav_bar" className={styles.navigationbar}>
                 <div className={styles.navigationbarContent}>
                   <Link
-                    id="nav_school_food_programs"
+                    data-cy="nav_school_food_programs"
                     href="/school_food_programs/"
                   >
                     <p>School Food Programs</p>
                   </Link>
 
-                  <div id="nav_research" className={styles.researchNavItem}>
+                  <div
+                    data-cy="nav_research"
+                    className={styles.researchNavItem}
+                  >
                     Research
                     <div
-                      id="nav_research_submenu"
+                      data-cy="nav_research_submenu"
                       className={styles.navBarSubMenu}
                     >
-                      <Link id="nav_intake_visuals" href="/intake_visuals/">
+                      <Link
+                        data-cy="nav_intake_visuals"
+                        href="/intake_visuals/"
+                      >
                         Intake Visuals
                       </Link>
                       <Separator />
                       <Link
-                        id="nav_measurement_tool_assessment"
+                        data-cy="nav_measurement_tool_assessment"
                         href="/measurement_tool_assessment/"
                       >
                         Measurement Tool Assessment
@@ -82,26 +88,29 @@ export default function RootLayout({
                     </div>
                   </div>
 
-                  <Link id="nav_news" href="/news/">
+                  <Link data-cy="nav_news" href="/news/">
                     News
                   </Link>
-                  <div id="nav_publications" className={styles.researchNavItem}>
+                  <div
+                    data-cy="nav_publications"
+                    className={styles.researchNavItem}
+                  >
                     Publications
                     <div
-                      id="nav_publications_submenu"
+                      data-cy="nav_publications_submenu"
                       className={styles.navBarSubMenu}
                     >
-                      <Link id="nav_manuscripts" href="/manuscripts/">
+                      <Link data-cy="nav_manuscripts" href="/manuscripts/">
                         Manuscripts
                       </Link>
                       <Separator />
-                      <Link id="nav_presentations" href="/presentations/">
+                      <Link data-cy="nav_presentations" href="/presentations/">
                         Presentations
                       </Link>
                       <Separator />
                     </div>
                   </div>
-                  <Link id="nav_about_fknm" href="/about_fknm/">
+                  <Link data-cy="nav_about_fknm" href="/about_fknm/">
                     About FKNM
                   </Link>
                 </div>

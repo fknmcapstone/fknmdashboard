@@ -55,7 +55,11 @@ function ProfileCard({
       showArrow
       shouldCloseOnInteractOutside={(e) => false}
     >
-      <PopoverTrigger key={index} className={styles.popoverTrigger}>
+      <PopoverTrigger
+        key={index}
+        data-cy={"popover_trigger_" + index}
+        className={styles.popoverTrigger}
+      >
         <Button>
           <Image
             src={imageURL}
@@ -68,7 +72,10 @@ function ProfileCard({
           {name}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className={styles.popoverContent}>
+      <PopoverContent
+        className={styles.popoverContent}
+        data-cy={"popover_content_" + index}
+      >
         <div className="px-1 py-2">
           <div className="text-small font-bold">Popover Content</div>
           <div className="text-tiny">{content}</div>
@@ -81,32 +88,35 @@ function ProfileCard({
 export default function AboutFKNM() {
   return (
     <main className={styles.main}>
-      <div className={styles.heading}>
+      <div data-cy="what_is_header" className={styles.heading}>
         What is Feeding Kids, Nourishing Minds?
       </div>
-      <div className={styles.textContent}>
+      <div data-cy="what_is_text" className={styles.textContent}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
         minimeniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
         ea commodo consequat.
       </div>
 
-      <div className={styles.heading}>
+      <div data-cy="about_the_header" className={styles.heading}>
         About the Feeding Kids, Nourishing Minds Dashboard
       </div>
-      <div className={styles.textContent}>
+      <div data-cy="about_the_text" className={styles.textContent}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
         minimeniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
         ea commodo consequat.
       </div>
-      <div className={styles.heading}>Meet The Team</div>
+      <div data-cy="meet_header" className={styles.heading}>
+        Meet The Team
+      </div>
       <Accordion
         variant="splitted"
         selectionMode="multiple"
         className={styles.accordion}
       >
         <AccordionItem
+          data-cy="steering_committee"
           className={styles.accordionItem}
           key="1"
           aria-label="Steering Committee"
@@ -125,6 +135,7 @@ export default function AboutFKNM() {
           </div>
         </AccordionItem>
         <AccordionItem
+          data-cy="research_team"
           className={styles.accordionItem}
           key="2"
           aria-label="Research Team"
@@ -143,6 +154,7 @@ export default function AboutFKNM() {
           </div>
         </AccordionItem>
         <AccordionItem
+          data-cy="admin_support"
           className={styles.accordionItem}
           key="3"
           aria-label="Administrative Support"
@@ -161,6 +173,7 @@ export default function AboutFKNM() {
           </div>
         </AccordionItem>
         <AccordionItem
+          data-cy="website_team"
           className={styles.accordionItem}
           key="4"
           aria-label="Website Team"

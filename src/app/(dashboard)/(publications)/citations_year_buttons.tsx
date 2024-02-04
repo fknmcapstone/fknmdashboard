@@ -38,11 +38,7 @@ export function citationsList(sources: {
     .map(([year, sourceList]) => {
       var manuscriptList = [];
       manuscriptList.push(
-        <div
-          key={"year_" + year}
-          id={"year_" + year}
-          className={styles.yearHeader}
-        >
+        <div key={"year_" + year} className={styles.yearHeader}>
           {year}
         </div>
       );

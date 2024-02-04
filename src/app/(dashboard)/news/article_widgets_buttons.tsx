@@ -26,8 +26,8 @@ export function RecentArticle({
 }) {
   return (
     <div className={styles.carouselSlide}>
-      <div className={styles.recentArticleRow}>
-        <div className={styles.recentArticleImage}>
+      <div data-cy="recent_article" className={styles.recentArticleRow}>
+        <div data-cy="recent_article_img" className={styles.recentArticleImage}>
           {image ? (
             <img src={image} />
           ) : (
@@ -43,7 +43,10 @@ export function RecentArticle({
 
         <div className={styles.recentArticleTitle}>
           <Link href={link} target="_blank">
-            <div className={styles.recentArticleTitleText}>
+            <div
+              data-cy="recent_article_title"
+              className={styles.recentArticleTitleText}
+            >
               {title}{" "}
               <svg className={styles.recentLinkArrow} viewBox="0 -40 600 600">
                 <path
@@ -56,7 +59,12 @@ export function RecentArticle({
             </div>
           </Link>
 
-          <p className={styles.recentArticleDateText}>{date}</p>
+          <p
+            data-cy="recent_article_date"
+            className={styles.recentArticleDateText}
+          >
+            {date}
+          </p>
         </div>
       </div>
     </div>
@@ -75,8 +83,8 @@ export function Article({
   link: string;
 }) {
   return (
-    <div className={styles.article}>
-      <div className={styles.articleImage}>
+    <div data-cy="article" className={styles.article}>
+      <div data-cy="article_img" className={styles.articleImage}>
         {image ? (
           <img src={image}></img>
         ) : (
@@ -95,7 +103,7 @@ export function Article({
 
       <div className={styles.articleTitle}>
         <Link href={link} target="_blank">
-          <div className={styles.articleTitleText}>
+          <div data-cy="article_title_text" className={styles.articleTitleText}>
             {title}{" "}
             <svg className={styles.linkArrow} viewBox="0 -50 700 600">
               <path
@@ -108,7 +116,9 @@ export function Article({
           </div>
         </Link>
 
-        <p className={styles.articleDateText}>{date}</p>
+        <p data-cy="article_date_text" className={styles.articleDateText}>
+          {date}
+        </p>
       </div>
     </div>
   );
@@ -119,6 +129,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
   return (
     <button
+      data-cy={isSVG ? "prev_svg_button" : "prev_text_button"}
       className={isSVG ? styles.prevSVGButton : styles.prevTextButton}
       type="button"
       {...restProps}
@@ -142,6 +153,7 @@ export const NextButton: React.FC<PropType> = (props) => {
 
   return (
     <button
+      data-cy={isSVG ? "next_svg_button" : "next_text_button"}
       className={isSVG ? styles.nextSVGButton : styles.nextTextButton}
       type="button"
       {...restProps}

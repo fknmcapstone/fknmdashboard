@@ -3,15 +3,18 @@ describe("Landing Page Spec", () => {
     cy.visit("/");
   });
   it("Smokes key elements", () => {
-    cy.get("#header").should("exist");
-    cy.get("#header_logo").should("exist");
-    cy.get("#header_title").should("exist");
-    cy.get("#nav_bar").should("exist");
-    cy.get("#research_title").should("exist");
-    const textIDs = ["landing", "school_food_programs", "research"];
-
-    for (var text of textIDs) {
-      cy.get("#" + text + "_text").should("exist");
+    const texts = [
+      "#header",
+      "#header_logo",
+      "#header_title",
+      "#nav_bar",
+      "#research_title",
+      "#landing_text",
+      "#school_food_programs_text",
+      "#research_text",
+    ];
+    for (var text of texts) {
+      cy.get('[data-cy="' + text + '"]').should("be.visible");
     }
   });
 

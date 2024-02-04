@@ -68,19 +68,23 @@ export const RecentNewsCarousel = () => {
   return (
     <div className={styles.carousel} ref={emblaRef}>
       <div className={styles.carouselContainer}>{articles}</div>
-      <p className={[styles.cardTitle, styles.recentNewsTitle].join(" ")}>
+      <p
+        data-cy="recent_news_title"
+        className={[styles.cardTitle, styles.recentNewsTitle].join(" ")}
+      >
         Recent News
       </p>
       <PrevButton isSVG={true} onClick={scrollPrev} />
       <NextButton isSVG={true} onClick={scrollNext} />
-      <div className={styles.paginationDots}>
+      <div className={styles.paginationAllDots}>
         {scrollSnaps.map((_, index) => (
           <DotButton
+            data-cy={"dot_button_" + index}
             key={index}
             onClick={() => scrollTo(index)}
             className={[
               styles.paginationDot,
-              index === selectedIndex ? styles.paginationDotSelected : null,
+              index === selectedIndex ? styles.paginationSelectedDot : null,
             ].join(" ")}
           ></DotButton>
         ))}
@@ -157,7 +161,7 @@ export const AllNewsCarousel = () => {
     <div className={styles.carousel} ref={emblaRef}>
       <div className={styles.carouselContainer}>{carouselSlides}</div>
 
-      <div className={styles.pageNumbers}>
+      <div className={styles.pageAllNumbers}>
         <PrevButton
           isSVG={false}
           onClick={scrollPrev}
@@ -165,11 +169,12 @@ export const AllNewsCarousel = () => {
         />
         {scrollSnaps.map((_, index) => (
           <DotButton
+            data-cy={"dot_number_button_" + index}
             key={index}
             onClick={() => scrollTo(index)}
             className={[
               styles.pageNumber,
-              index === selectedIndex ? styles.pageNumberSelected : null,
+              index === selectedIndex ? styles.pageSelectedNumber : null,
             ].join(" ")}
           >
             {index + 1}
