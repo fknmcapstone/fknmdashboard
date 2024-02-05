@@ -4,6 +4,7 @@
   padding-top: 4rem;
   padding-bottom: 7rem;
   background-color: var(--background-color);
+  color: var(--dark-text-color);
 }
 
 .fixedMenuContainer {
@@ -11,6 +12,7 @@
   position: absolute;
   top: 0;
   right: 50%;
+  pointer-events: none;
 }
 
 .shortcutMenu {
