@@ -16,6 +16,7 @@
 }
 
 .shortcutMenu {
+  pointer-events: all;
   transform: translateX(-80%);
   padding: 1rem 2rem 2rem 1rem;
   margin-inline-end: 3rem;
