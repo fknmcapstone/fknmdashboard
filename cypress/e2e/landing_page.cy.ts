@@ -28,4 +28,9 @@ describe("Landing Page Spec", () => {
         });
     });
   });
+
+  it("Tests the page for accessibility", () => {
+    cy.injectAxe();
+    cy.checkA11y();
+  });
 });

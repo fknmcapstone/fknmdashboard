@@ -5,6 +5,7 @@
   background-color: var(--background-color);
   grid-template-columns: 3fr 1fr 9fr;
   grid-template-rows: 5rem 5rem 1fr;
+  color: var(--dark-text-color);
 }
 
 #map {

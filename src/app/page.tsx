@@ -21,7 +21,7 @@ function Separator({ color = "black", height = 2 }) {
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.landingPageContent}>
+      <h1 className={styles.landingPageContent}>
         <div className={styles.landingBlurbContainer}>
           <div data-cy="landing_text" className={styles.landingBlurb}>
             Sample text about the dashboard and an explanation as to why this is
@@ -45,7 +45,10 @@ export default function Home() {
           Our Research
         </div>
         <div className={styles.researchSection}>
-          <div className={styles.schoolFoodSectionImg}></div>
+          <div
+            className={styles.schoolFoodSectionImg}
+            title="Globe container opened up with 2 apples sitting inside"
+          ></div>
           <Link
             data-cy="school_food_programs_link"
             href={"/school_food_programs/"}
@@ -80,7 +83,10 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.researchSection}>
-          <div className={styles.researchSectionImg}></div>
+          <div
+            className={styles.researchSectionImg}
+            title="Several lunch containers with food in them on a table with piled notebooks"
+          ></div>
 
           <div className={[styles.sectionTitleLinkContainer].join(" ")}>
             <p className={styles.sectionTitle}>Research</p>
@@ -133,7 +139,9 @@ export default function Home() {
             <Image
               className={styles.logo}
               src="/Lawson_logo.png"
-              alt={""}
+              alt={
+                "Logo of the University of Toronto's Joannah & Brian Lawson Centre for Child Nutrition"
+              }
               width="300"
               height="300"
             ></Image>
@@ -146,7 +154,9 @@ export default function Home() {
             <Image
               className={styles.logo}
               src="/CGEN_UT_Signature_P655_RGB.png"
-              alt={""}
+              alt={
+                "Logo of the University of Toronto's Centre for Global Engineering"
+              }
               width="300"
               height="300"
             ></Image>
@@ -159,7 +169,9 @@ export default function Home() {
             <Image
               className={styles.logo}
               src="/ECE_UT_Signature_P655_RGB.png"
-              alt={""}
+              alt={
+                "Logo of the University of Toronto's Electrical & Computer Engineering Department"
+              }
               width="300"
               height="300"
             ></Image>
@@ -172,13 +184,15 @@ export default function Home() {
             <Image
               className={styles.logo}
               src="/FASE_UT_Signature_RGB_P655_RGB.png"
-              alt={""}
+              alt={
+                "Logo of the University of Toronto's Faculty of Applied Science and Engineering"
+              }
               width="300"
               height="300"
             ></Image>
           </a>
         </div>
-      </div>
+      </h1>
     </main>
   );
 }

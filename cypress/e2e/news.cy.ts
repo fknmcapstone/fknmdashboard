@@ -40,7 +40,7 @@ describe("News Page Spec", () => {
     });
   });
 
-  it.only("Tests interactivity with both carousels", () => {
+  it("Tests interactivity with both carousels", () => {
     // Recent News carousel
 
     // Disables autoplay by clicking a button in the carousel
@@ -112,5 +112,10 @@ describe("News Page Spec", () => {
           failOnStatusCode: false,
         });
     });
+  });
+
+  it.only("Tests the page for accessibility", () => {
+    cy.injectAxe();
+    cy.checkA11y();
   });
 });

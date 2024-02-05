@@ -34,4 +34,9 @@ describe("COVID-19 Page spec", () => {
       cy.get('[data-cy="' + text + '"]').should("be.visible");
     }
   });
+
+  it("Tests the page for accessibility", () => {
+    cy.injectAxe();
+    cy.checkA11y();
+  });
 });

@@ -32,6 +32,7 @@
   justify-content: space-around;
   background-color: var(--secondary-color);
   place-items: center;
+  z-index: 1;
 }
 
 .navigationbarContent {
@@ -122,6 +123,7 @@
 }
 
 .researchTitle {
+  color: var(--dark-text-color);
   margin-block-start: 4rem;
   width: 100%;
   font-weight: 600;
@@ -130,6 +132,7 @@
 }
 
 .researchSection {
+  color: var(--dark-text-color);
   align-self: flex-start;
   justify-self: center;
   width: 70rem;
