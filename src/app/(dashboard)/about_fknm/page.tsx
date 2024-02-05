@@ -203,7 +203,9 @@ export default function AboutFKNM() {
           <Image
             className={styles.logo}
             src="/Lawson_logo.png"
-            alt={""}
+            alt={
+              "Logo of the University of Toronto's Joannah & Brian Lawson Centre for Child Nutrition"
+            }
             width="300"
             height="300"
           ></Image>
@@ -216,7 +218,9 @@ export default function AboutFKNM() {
           <Image
             className={styles.logo}
             src="/CGEN_UT_Signature_P655_RGB.png"
-            alt={""}
+            alt={
+              "Logo of the University of Toronto's Centre for Global Engineering"
+            }
             width="300"
             height="300"
           ></Image>
@@ -229,7 +233,9 @@ export default function AboutFKNM() {
           <Image
             className={styles.logo}
             src="/ECE_UT_Signature_P655_RGB.png"
-            alt={""}
+            alt={
+              "Logo of the University of Toronto's Electrical & Computer Engineering Department"
+            }
             width="300"
             height="300"
           ></Image>
@@ -242,7 +248,9 @@ export default function AboutFKNM() {
           <Image
             className={styles.logo}
             src="/FASE_UT_Signature_RGB_P655_RGB.png"
-            alt={""}
+            alt={
+              "Logo of the University of Toronto's Faculty of Applied Science and Engineering"
+            }
             width="300"
             height="300"
           ></Image>

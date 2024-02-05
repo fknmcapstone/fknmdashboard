@@ -59,6 +59,7 @@ export const RecentNewsCarousel = () => {
       <RecentArticle
         title={article.title}
         image={article.image}
+        imageAltText={article.image_alt}
         link={article.link}
         date={article.date}
       />,
@@ -139,6 +140,7 @@ export const AllNewsCarousel = () => {
       <Article
         title={article.title}
         image={article.image}
+        imageAltText={article.image_alt}
         link={article.link}
         date={article.date}
       />,
