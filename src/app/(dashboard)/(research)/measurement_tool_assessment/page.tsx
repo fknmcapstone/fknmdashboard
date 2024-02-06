@@ -59,8 +59,10 @@ export default function MeasurementToolAssessment() {
       <div className={styles.title}>
         <p>Measurement Tool Assessment</p>
       </div>
-
-      <img src="map_placeholder.png" id={styles.map}></img>
+      <div id={styles.map}>
+      <iframe title="Track_3_Map" width="1024" height="612" src="https://app.powerbi.com/view?r=eyJrIjoiZDUxMmU5MmYtZGVlMi00MzZmLTljMjctYjI0MjBjMGQ5OTI2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9" frameborder="0" allowFullScreen="true"></iframe>
+      </div>
+      <div className={styles.greyRectangle}></div> {/* grey rectangle */}
       <div className={styles.subtext}>
         <p>Blurb from discussing what is being shown here. Long blurb</p>
       </div>

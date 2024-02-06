@@ -71,3 +71,15 @@
   font-size: var(--big-paragraph-font-size);
   font-weight: 500;
 }
+
+
+.greyRectangle {
+  grid-row: 4; 
+  grid-column: 3 / span 2; 
+  margin-inline-end: 7rem;
+  height: 3rem; 
+  background-color: var(--background-color); 
+  border-radius: 5px;
+  margin-top: 1rem; 
+  transform: translateY(-9rem);
+}

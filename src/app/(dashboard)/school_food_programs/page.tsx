@@ -67,7 +67,10 @@ export default function CurrentPrograms() {
           </AccordionItem>
         </Accordion>
       </div>
-      <img src="map_placeholder.png" id={styles.map}></img>
+      <div id={styles.map}>
+      <iframe title="Track_3_Map" width="1096" height="680" src="https://app.powerbi.com/view?r=eyJrIjoiZDUxMmU5MmYtZGVlMi00MzZmLTljMjctYjI0MjBjMGQ5OTI2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9" frameborder="0" allowFullScreen="true"></iframe>
+      </div>
+      <div className={styles.greyRectangle}></div> {/* grey rectangle */}
     </main>
   );
 }
