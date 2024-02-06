@@ -114,7 +114,7 @@ describe("News Page Spec", () => {
     });
   });
 
-  it.only("Tests the page for accessibility", () => {
+  it("Tests the page for accessibility", () => {
     cy.injectAxe();
     cy.checkA11y();
   });

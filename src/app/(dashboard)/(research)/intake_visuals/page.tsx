@@ -5,7 +5,10 @@ import ToTopButton from "./reveal";
 
 import chartData from "./charts.json";
 
-const NUM_CHARTS = chartData.length;
+let NUM_CHARTS = 0;
+for (var category of chartData) {
+  NUM_CHARTS += category.charts.length;
+}
 
 function shortcutMenuList() {
   let shortcuts = [];
@@ -28,7 +31,7 @@ function shortcutMenuList() {
         <Link key={chart.name} href={`#${category}${chart.name}`}>
           {chart.name}
         </Link>
-      );      
+      );
     });
 
     shortcuts.push(
@@ -46,29 +49,37 @@ function chartList() {
     const { category, charts: categoryCharts } = categoryData;
 
     charts.push(
-      <div key={`${category}`} id={`${category}`} className={styles.chartCategoryHeader}>
+      <div
+        key={`${category}`}
+        id={`${category}`}
+        className={styles.chartCategoryHeader}
+      >
         {category}
       </div>,
-      <div key={`${category}-separator`} className={styles.shortcutMenuSeparator} />
+      <div
+        key={`${category}-separator`}
+        className={styles.shortcutMenuSeparator}
+      />
     );
 
     categoryCharts.forEach((chart) => {
       charts.push(
-        <div key={`${category}${chart.name}`} id={`${category}${chart.name}`} className={styles.chartArea}>
+        <div
+          key={`${category}${chart.name}`}
+          id={`${category}${chart.name}`}
+          className={styles.chartArea}
+        >
           <div className={styles.tooltipContainer}>
-            <button className={styles.tooltipButton}>
-              i
-            </button>
+            <button className={styles.tooltipButton}>i</button>
             <div className={styles.tooltip}>
               <p>{chart.blurb}</p>
             </div>
           </div>
 
-
           <iframe
             title={`${category} - ${chart.name}`}
             width="100%"
-            height="118%" 
+            height="118%"
             src={chart.url}
             allowFullScreen
           ></iframe>
@@ -80,7 +91,6 @@ function chartList() {
   return charts;
 }
 
-
 export default function IntakeVisuals() {
   return (
     <main className={styles.main}>
@@ -88,7 +98,7 @@ export default function IntakeVisuals() {
 
       <div
         className={styles.fixedMenuContainer}
-        style={{ height: 33.8 * NUM_CHARTS + "rem" }}
+        style={{ height: 38 * NUM_CHARTS + "rem" }}
       >
         <div className={styles.shortcutMenu}>{shortcutMenuList()}</div>
       </div>
