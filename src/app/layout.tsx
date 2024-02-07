@@ -85,6 +85,13 @@ export default function RootLayout({
                         Measurement Tool Assessment
                       </Link>
                       <Separator />
+                      <Link
+                        id="nav_sfp_components"
+                        href="/sfp_components/"
+                      >
+                        SFP Components
+                      </Link>
+                    <Separator />
                     </div>
                   </div>
 
