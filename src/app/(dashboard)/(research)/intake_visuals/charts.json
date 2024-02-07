@@ -1,33 +1,47 @@
-  [
-    {
-      "category": "Category 1",
-      "charts": [
-        {
-          "name": "Data Visual 0",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This is a short description of Data Visual 0."
-        },
-        {
-          "name": "Data Visual 1",
-          "url": "",
-          "blurb": "Description for Data Visual 1."
-        }
-      ]
-    },
-    {
-      "category": "Category 2",
-      "charts": [
-        {
-          "name": "Data Visual 2",
-          "url": "",
-          "blurb": "Description for Data Visual 2."
-        },
-        {
-          "name": "Data Visual 3",
-          "url": "",
-          "blurb": "Description for Data Visual 3."
-        }
-      ]
-    }
-  ]
-  
+[
+  {
+    "category": "Category 1",
+    "charts": [
+      {
+        "name": "School Food Programs Offered in GTA",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This is a short description of Data Visual 0."
+      },
+      {
+        "name": "Data Visual 1",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This is a short description of Data Visual 0."
+      },
+      {
+        "name": "Data Visual 2",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This is a short description of Data Visual 0."
+      }
+    ]
+  },
+  {
+    "category": "Category 2",
+    "charts": [
+      {
+        "name": "Data Visual 3",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This is a short description of Data Visual 0."
+      },
+      {
+        "name": "Data Visual 4",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This is a short description of Data Visual 0."
+      },
+      {
+        "name": "Data Visual 5",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This is a short description of Data Visual 0."
+      },
+      {
+        "name": "Data Visual 6",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This is a short description of Data Visual 0."
+      }
+    ]
+  }
+]

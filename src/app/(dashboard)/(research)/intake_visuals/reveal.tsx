@@ -27,6 +27,7 @@ const ToTopButton = () => {
 
   return (
     <button
+      data-cy="return_to_top_button"
       className={styles.returnToTopButton}
       style={{ display: isVisible ? "block" : "none" }}
       onClick={scrollToTop}

@@ -30,45 +30,63 @@ let equityIndicators = [
 let qualityAssessment = ["ROB - Risk of Bias"];
 
 let keyOutcomesElementList = keyOutcomes.map((outcome) => {
-  return <p>{outcome}</p>;
+  return <p data-cy="key_outcomes_item">{outcome}</p>;
 });
 
 let equityIndicatorsElementList = equityIndicators.map((indicator) => {
-  return <p>{indicator}</p>;
+  return <p data-cy="indicator_item">{indicator}</p>;
 });
 
 let qualityAssessmentElementList = qualityAssessment.map((assessment) => {
-  return <p>{assessment}</p>;
+  return <p data-cy="assessment_item">{assessment}</p>;
 });
 
 export default function CurrentPrograms() {
   return (
     <main className={styles.main}>
-      <div id={styles.aboutText}>
-        <p>Blurb here discussing what is shown on the map</p>
-      </div>
+      <h1 id={styles.aboutText}>
+        <p data-cy="about_text">
+          Blurb here discussing what is shown on the map
+        </p>
+      </h1>
       <div id={styles.helperText}>
-        <p>
+        <p data-cy="helper_text">
           Hover over each program point on<br></br> the map to see more
           information
         </p>
       </div>
-      <div id={styles.foldableLegend}>
+      <div data-cy="legend" id={styles.foldableLegend}>
         <p id={styles.legendTitle}>Legend</p>
         <Accordion selectionMode="multiple" className={styles.item}>
-          <AccordionItem key="1" title="Key Outcomes">
+          <AccordionItem data-cy="key_outcomes" key="1" title="Key Outcomes">
             {keyOutcomesElementList}
           </AccordionItem>
-          <AccordionItem key="2" title="Disaggregated Equity Indicators">
+          <AccordionItem
+            data-cy="indicator"
+            key="2"
+            title="Disaggregated Equity Indicators"
+          >
             {equityIndicatorsElementList}
           </AccordionItem>
-          <AccordionItem key="3" title="Quality Assessment">
+          <AccordionItem
+            data-cy="assessment"
+            key="3"
+            title="Quality Assessment"
+          >
             {qualityAssessmentElementList}
           </AccordionItem>
         </Accordion>
       </div>
       <div id={styles.map}>
-      <iframe title="Track_3_Map" width="1096" height="680" src="https://app.powerbi.com/view?r=eyJrIjoiZDUxMmU5MmYtZGVlMi00MzZmLTljMjctYjI0MjBjMGQ5OTI2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe
+          data-cy="chart_frame"
+          title="Track_3_Map"
+          width="1096"
+          height="680"
+          src="https://app.powerbi.com/view?r=eyJrIjoiZDUxMmU5MmYtZGVlMi00MzZmLTljMjctYjI0MjBjMGQ5OTI2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9"
+          frameBorder="0"
+          allowFullScreen={true}
+        ></iframe>
       </div>
       <div className={styles.greyRectangle}></div> {/* grey rectangle */}
     </main>
