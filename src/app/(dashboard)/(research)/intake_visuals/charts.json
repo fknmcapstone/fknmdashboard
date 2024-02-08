@@ -3,27 +3,102 @@
       "category": "Category 1",
       "charts": [
         {
-          "name": "Data Visual 0",
+          "name": "School Food Programs offered",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This is a short description of Data Visual 0."
+          "blurb": "This chart highlights the distribution of the School Food Programs Offered in the GTA."
         },
         {
-          "name": "Data Visual 1",
-          "url": "",
+          "name": "Parental Enrolment of Children",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiZmE3NmNlYWUtZjkyYy00OTRjLThmYjgtZDZkZGVmYzlkNGVjIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
           "blurb": "Description for Data Visual 1."
+        },
+        {
+          "name": "Parental Opposition",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNDg2M2Y5NDAtZjM3YS00ZTZiLWFkMTYtZmI0YmI1MzlkMDI5IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Times That the Programs Are Offered",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiZDg3NmMyODAtOGQ2Mi00OTQwLTg1YTMtNTE4NzY3YTllYjk4IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "% of Schools Implementing SFP",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiMThlZWUyMWUtNDg0MS00ODFlLTk2YzMtMmE5OTlhYWQ2YWIyIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Frequency of SFP Per Week",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiZjc2ODk0YmMtNDBmYS00YTgyLTk2ZGUtYmMzYWQ1NGZkMTkzIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
         }
       ]
     },
     {
-      "category": "Category 2",
+      "category": "Category 2.1",
       "charts": [
         {
-          "name": "Data Visual 2",
+          "name": "Willingness to partipcate in SFP",
           "url": "",
           "blurb": "Description for Data Visual 2."
         },
         {
-          "name": "Data Visual 3",
+          "name": "Comfort from SFP",
+          "url": "",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Preparing School meals",
+          "url": "",
+          "blurb": "Description for Data Visual 3."
+        }
+      ]
+    },
+    {
+      "category": "Category 2.2",
+      "charts": [
+        {
+          "name": "Maximum Cost can be afforded",
+          "url": "",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Preferred Funding Models",
+          "url": "",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Parental Preference for offered SFP",
+          "url": "",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Parental Prefered Timings for SFP",
+          "url": "",
+          "blurb": "Description for Data Visual 3."
+        }
+      ]
+    },
+    {
+      "category": "Category 2.3",
+      "charts": [
+        {
+          "name": "Menu Aligns Canada Food Guide",
+          "url": "",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Opinion on Culturally Appropriate food",
+          "url": "",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Minimally processed meals and snacks",
+          "url": "",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Various Food Portions offered",
           "url": "",
           "blurb": "Description for Data Visual 3."
         }

@@ -45,13 +45,9 @@ export default function CurrentPrograms() {
   return (
     <main className={styles.main}>
       <div id={styles.aboutText}>
-        <p>Blurb here discussing what is shown on the map</p>
+        <p>This systematic review aimed to synthesize and appraise literature on Canadian school food and nutrition interventions, policies and programs and their effects on diets and nutritional status.Overall, the literature remains largely heterogenous and primarily focused on nutrition education programs which use subjective assessments to infer changes in nutrition.</p>
       </div>
       <div id={styles.helperText}>
-        <p>
-          Hover over each program point on<br></br> the map to see more
-          information
-        </p>
       </div>
       <div id={styles.foldableLegend}>
         <p id={styles.legendTitle}>Legend</p>
