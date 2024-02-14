@@ -6,10 +6,10 @@
   padding-block-end: 3rem;
 }
 
+/* CSS for Header and Navigation Bar component */
 .header {
   display: flex;
   align-items: center;
-  padding: 2rem;
   height: 5rem;
   flex-direction: row;
   background-color: var(--primary-color);
@@ -21,12 +21,19 @@
   white-space: nowrap;
 }
 
-.headerLogo {
-  padding-right: 2rem;
+.menuButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+.menuButton {
+  margin: 0.5rem;
 }
 
 .navigationbar {
-  height: 3rem;
+  height: fit-content;
+  padding-block: 0.7rem;
   display: flex;
   font-size: var(--small-paragraph-font-size);
   justify-content: space-around;
@@ -36,11 +43,12 @@
 }
 
 .navigationbarContent {
-  height: 2.5rem;
+  height: fit-content;
   display: flex;
   white-space: nowrap;
   color: var(--light-text-color);
   align-items: center;
+  justify-content: center;
 }
 
 .navigationbarContent > * {
@@ -48,6 +56,7 @@
 }
 
 .navBarSubMenu {
+  text-align: left;
   line-height: 100%;
   display: none;
   position: absolute;
@@ -76,6 +85,44 @@
   margin-left: 0.3rem;
   display: block;
 }
+
+/* CSS for Sidebar component */
+.backdrop {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 34, 83, 0.95);
+  position: absolute;
+  padding-top: 6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+}
+
+.closeButton {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+.sidebarItem {
+  color: var(--light-text-color);
+  font-size: var(--small-paragraph-font-size);
+  justify-self: center;
+  width: fit-content;
+  height: min-content;
+  padding: 1rem;
+}
+
+.sidebarTitle {
+  position: absolute;
+  font-weight: 500;
+  left: 2rem;
+  top: 2rem;
+  color: var(--light-text-color);
+  font-size: var(--big-paragraph-font-size);
+}
+
+/* CSS for Landing Page */
 
 .landingPageContent {
   display: grid;

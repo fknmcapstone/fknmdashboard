@@ -4,14 +4,14 @@ describe("Landing Page Spec", () => {
   });
   it("Smokes key elements", () => {
     const texts = [
-      "#header",
-      "#header_logo",
-      "#header_title",
-      "#nav_bar",
-      "#research_title",
-      "#landing_text",
-      "#school_food_programs_text",
-      "#research_text",
+      "header",
+      "header_logo",
+      "header_title",
+      "nav_bar",
+      "research_title",
+      "landing_text",
+      "school_food_programs_text",
+      "research_text",
     ];
     for (var text of texts) {
       cy.get('[data-cy="' + text + '"]').should("be.visible");
