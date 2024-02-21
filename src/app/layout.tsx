@@ -1,34 +1,52 @@
-import type { Metadata } from "next";
+"use client";
+
 import { outfit } from "./fonts";
 import "./globals.css";
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./(landing_page)/page.module.css";
 import Link from "next/link";
 import { Providers } from "./providers";
-
-export const metadata: Metadata = {
-  title: "Feeding Kids, Nourishing Minds Dashboard",
-  description: "ECE496 Capstone Project",
-};
-
-function Separator({ height = 1 }) {
-  return (
-    <hr
-      style={{
-        backgroundColor: "white",
-        marginBlock: "0.8rem",
-        height: height,
-        border: "none",
-      }}
-    />
-  );
-}
+import Navbar from "./(landing_page)/navbar";
+import { useEffect, useState } from "react";
+import Sidebar from "./(landing_page)/sidebar";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [width, setWidth] = useState(0);
+
+  const updateWidth = () => {
+    const newWidth = window.innerWidth;
+    setWidth(newWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateWidth);
+    updateWidth();
+  }, []);
+
+  // change between the logo and the button when the user scrolls
+  const [showButton, setShowButton] = useState(false);
+
+  const changeNavButton = () => {
+    if (window.scrollY >= 400 && window.innerWidth < 768) {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavButton);
+  }, []);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <html lang="en" className={outfit.className}>
       <body>
@@ -36,93 +54,62 @@ export default function RootLayout({
           <section>
             {/* Include shared UI here e.g. a header or sidebar */}
             <nav>
-              <div data-cy="header" className={styles.header}>
+              <div
+                data-cy="header"
+                className={styles.header}
+                style={{ padding: width < 1024 ? "0.5rem" : "2rem" }}
+              >
                 <Link href="/">
-                  <div data-cy="header_logo" className={styles.headerLogo}>
+                  <div
+                    data-cy="header_logo"
+                    style={{ paddingRight: width < 1024 ? "0.8rem" : "2rem" }}
+                  >
                     <Image
                       src="/fknm_logo.png"
                       alt="FKNM Logo"
-                      width={70}
-                      height={70}
+                      width={width < 1024 ? 50 : 70}
+                      height={width < 1024 ? 50 : 70}
                       priority
                     />
                   </div>
                 </Link>
                 <Link data-cy="header_title" href="/">
-                  <p>Feeding Kids, Nourishing Minds</p>
+                  {width < 1024 ? (
+                    <p style={{ fontSize: 1 + "rem" }}>
+                      Feeding Kids,
+                      <br />
+                      Nourishing Minds
+                    </p>
+                  ) : (
+                    <p style={{ fontSize: 2 + "rem" }}>
+                      Feeding Kids, Nourishing Minds
+                    </p>
+                  )}
                 </Link>
-              </div>
-
-              <div data-cy="nav_bar" className={styles.navigationbar}>
-                <div className={styles.navigationbarContent}>
-                  <Link
-                    data-cy="nav_school_food_programs"
-                    href="/school_food_programs/"
-                  >
-                    <p>School Food Programs</p>
-                  </Link>
-
-                  <div
-                    data-cy="nav_research"
-                    className={styles.researchNavItem}
-                  >
-                    Research
-                    <div
-                      data-cy="nav_research_submenu"
-                      className={styles.navBarSubMenu}
-                    >
-                      <Link
-                        data-cy="nav_intake_visuals"
-                        href="/intake_visuals/"
+                {width < 1024 ? (
+                  <div className={styles.menuButtonContainer}>
+                    <div className={styles.menuButton} onClick={toggle}>
+                      {/* Menu icon */}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 24 24"
                       >
-                        Intake Visuals
-                      </Link>
-                      <Separator />
-                      <Link
-                        data-cy="nav_measurement_tool_assessment"
-                        href="/measurement_tool_assessment/"
-                      >
-                        Measurement Tool Assessment
-                      </Link>
-                      <Separator />
-                      <Link
-                        id="nav_sfp_components"
-                        href="/sfp_components/"
-                      >
-                        SFP Components
-                      </Link>
-                    <Separator />
+                        <path
+                          fill="#fff"
+                          d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"
+                        />
+                      </svg>
                     </div>
                   </div>
-
-                  <Link data-cy="nav_news" href="/news/">
-                    News
-                  </Link>
-                  <div
-                    data-cy="nav_publications"
-                    className={styles.researchNavItem}
-                  >
-                    Publications
-                    <div
-                      data-cy="nav_publications_submenu"
-                      className={styles.navBarSubMenu}
-                    >
-                      <Link data-cy="nav_manuscripts" href="/manuscripts/">
-                        Manuscripts
-                      </Link>
-                      <Separator />
-                      <Link data-cy="nav_presentations" href="/presentations/">
-                        Presentations
-                      </Link>
-                      <Separator />
-                    </div>
-                  </div>
-                  <Link data-cy="nav_about_fknm" href="/about_fknm/">
-                    About FKNM
-                  </Link>
-                </div>
+                ) : (
+                  <div />
+                )}
               </div>
             </nav>
+            <Navbar width={width} />
+            {width < 1024 ? <Sidebar isOpen={isOpen} toggle={toggle} /> : null}
 
             {children}
           </section>

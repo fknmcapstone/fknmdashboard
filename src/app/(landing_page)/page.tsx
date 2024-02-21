@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { Metadata } from "next";
 
 function Separator({ color = "black", height = 2 }) {
   return (
@@ -17,6 +18,11 @@ function Separator({ color = "black", height = 2 }) {
     />
   );
 }
+
+export const metadata: Metadata = {
+  title: "Feeding Kids, Nourishing Minds Dashboard",
+  description: "ECE496 Capstone Project",
+};
 
 export default function Home() {
   return (
