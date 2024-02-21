@@ -75,8 +75,8 @@
 
 .greyRectangle {
   grid-row: 4; 
-  grid-column: 3 / span 2; 
-  margin-inline-end: 7rem;
+  grid-column: 3 / span 1; 
+  margin-inline-end: 35rem;
   height: 3rem; 
   background-color: var(--background-color); 
   border-radius: 5px;

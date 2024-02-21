@@ -4,6 +4,7 @@ import Link from "next/link";
 import ToTopButton from "./reveal";
 
 import chartData from "./charts.json";
+import { JSX } from "react";
 
 let NUM_CHARTS = 0;
 for (var category of chartData) {
@@ -11,13 +12,17 @@ for (var category of chartData) {
 }
 
 function shortcutMenuList() {
-  let shortcuts = [];
+  let shortcuts: JSX.Element[] = [];
 
   chartData.forEach((categoryData) => {
     const { category, charts } = categoryData;
 
     shortcuts.push(
-      <p key={category} className={styles.shortcutCategoryHeader}>
+      <p
+        key={category}
+        data-cy={"shortcut_" + category + "_header"}
+        className={styles.shortcutCategoryHeader}
+      >
         {category}
       </p>,
       <div
@@ -43,7 +48,7 @@ function shortcutMenuList() {
 }
 
 function chartList() {
-  let charts = [];
+  let charts: JSX.Element[] = [];
 
   chartData.forEach((categoryData) => {
     const { category, charts: categoryCharts } = categoryData;
@@ -52,6 +57,7 @@ function chartList() {
       <div
         key={`${category}`}
         id={`${category}`}
+        data-cy={"chart_" + category + "_header"}
         className={styles.chartCategoryHeader}
       >
         {category}
@@ -66,17 +72,20 @@ function chartList() {
       charts.push(
         <div
           key={`${category}${chart.name}`}
-          id={`${category}${chart.name}`}
+          data-cy={`${category}${chart.name}`}
           className={styles.chartArea}
         >
           <div className={styles.tooltipContainer}>
-            <button className={styles.tooltipButton}>i</button>
-            <div className={styles.tooltip}>
+            <button data-cy="tooltip_button" className={styles.tooltipButton}>
+              i
+            </button>
+            <div data-cy="tooltip_text" className={styles.tooltip}>
               <p>{chart.blurb}</p>
             </div>
           </div>
 
           <iframe
+            data-cy="chart_frame"
             title={`${category} - ${chart.name}`}
             width="100%"
             height="118%"
@@ -96,12 +105,14 @@ export default function IntakeVisuals() {
     <main className={styles.main}>
       <ToTopButton />
 
-      <div
+      <h1
         className={styles.fixedMenuContainer}
-        style={{ height: 38 * NUM_CHARTS + "rem" }}
+        style={{ height: 36 * NUM_CHARTS + "rem" }}
       >
-        <div className={styles.shortcutMenu}>{shortcutMenuList()}</div>
-      </div>
+        <div data-cy="shortcut_menu" className={styles.shortcutMenu}>
+          {shortcutMenuList()}
+        </div>
+      </h1>
 
       <div className={styles.chartColumn}>{chartList()}</div>
     </main>

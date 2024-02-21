@@ -24,13 +24,18 @@ export default function Home() {
       <h1 className={styles.landingPageContent}>
         <div className={styles.landingBlurbContainer}>
           <div data-cy="landing_text" className={styles.landingBlurb}>
-            Sample text about the dashboard and an explanation as to why this is
-            done and how it started, more text, more words more explanation,
-            some light description
-            <br />
-            Sample text about the dashboard and an explanation as to why this is
-            done and how it started, more text, more words more explanation,
-            some light description
+          The Feeding Kids, Nourishing Minds (FKNM) School-Based Nutrition
+          Research Initiative is a project funded by a donation from President’s
+          Choice Children’s Charity. Through a landscape policy analysis and
+          series of systematic reviews, a comprehensive overview of school meal
+          and snack programs in Canada is being organised in an interactive
+          dashboard including consideration of equity indicators. 
+          <br />
+          The impact of the COVID-19 pandemic, including changes
+          in policies and programs, highlight the lessons learned and
+          opportunities for leveraging these programs and improving resiliency in
+          marginalized communities. The FKNM is informing the guidance of a
+          framework for a national school food program policy.
           </div>
 
           <Link

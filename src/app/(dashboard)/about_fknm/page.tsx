@@ -112,10 +112,10 @@ export default function AboutFKNM() {
         What is Feeding Kids, Nourishing Minds?
       </div>
       <div className={styles.textContent} data-cy="what_is_text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minimeniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-        ea commodo consequat.
+        The Feeding Kids, Nourishing Minds (FKNM) School-Based Nutrition
+        Research Initiative is a project funded by a donation from President’s
+        Choice Children’s Charity. The FKNM is informing the guidance of a
+        framework for a national school food program policy.
       </div>
 
       <div className={styles.heading} data-cy="about_the_header">
