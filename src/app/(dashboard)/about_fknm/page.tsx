@@ -14,54 +14,10 @@ import {
 import styles from "./page.module.css";
 import Image from "next/image";
 
-function ProfileCard({
-  name,
-  imageURL,
-  content,
-}: {
-  name: string;
-  imageURL: string;
-  content: string;
-}) {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-  /*return (
-    <>
-      <div className={styles.cardWrapper}>
-        <Button onClick={onOpen} className={styles.profileButton}>
-          <div className={styles.cardContent}>
-            <Image
-              src={imageURL}
-              alt={name}
-              className={styles.profileImage}
-              width={120}
-              height={120}
-              priority
-            />
-            <div className={styles.profileName}>{name}</div>
-          </div>
-        </Button>
-      </div>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalContent>
-          <ModalHeader>{name}</ModalHeader>
-          <ModalBody>
-            <div className={`${styles.popoverInner} px-1 py-2`}>
-              <div className={`${styles.popoverTitle} text-small font-bold`}>
-                Popover Content
-              </div>
-              <div className={`${styles.popoverText} text-tiny`}>{content}</div>
-            </div>
-          </ModalBody>
-          <ModalFooter>
-            <Button color="primary" variant="light" onClick={onClose}>
-              Close
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
-    </> 
-  );*/
+function ProfileCard({ name, imageURL, content }) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Button onPress={onOpen} className={styles.cardButton}>
@@ -77,26 +33,22 @@ function ProfileCard({
           <div className={styles.profileName}>{name}</div>
         </div>
       </Button>
-      <Modal size={"5xl"} isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal size="5xl" isOpen={isOpen} onClose={onClose}>
         <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalHeader
-                className="flex flex-col gap-1"
-              >
-                <div className={`${styles.modalHeader}`}>{name}</div>
-                
-              </ModalHeader>
-              <ModalBody>
-                <div className={`${styles.modalText}`}>{content}</div>
-              </ModalBody>
-              <ModalFooter>
-                <Button color="primary" onPress={onClose}>
-                  Close
-                </Button>
-              </ModalFooter>
-            </>
-          )}
+          <ModalHeader className={styles.modalHeader}>
+            <Image
+              src={imageURL}
+              alt={name}
+              className={styles.profileImage}
+              width={120}
+              height={120}
+              priority
+            />
+            <div className={styles.modalHeader}>{name}</div>
+          </ModalHeader>
+          <ModalBody>
+            <div className={styles.modalText}>{content}</div>
+          </ModalBody>
         </ModalContent>
       </Modal>
     </>

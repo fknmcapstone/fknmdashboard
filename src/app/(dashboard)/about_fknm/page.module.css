@@ -45,6 +45,16 @@
 
 .modalText {
   color: black !important;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+
+.modalHeader{
+align-items: center;
+display: flex;
+flex-direction: column;
+margin-top: 0.25rem;
 }
 
 .popoverTrigger {
@@ -72,11 +82,15 @@
 .cardButton {
   border: none;
   background: none;
-  padding: 10vh;
+  padding-top: 70%;
+  padding-bottom: 70%;
+  padding-right: 2%;
+  padding-left: 2%;
   cursor: pointer;
-  display: flex; /* Ensure the content aligns properly */
-  flex-direction: column; /* Stack the content vertically */
-  align-items: center; /* Center the content horizontally */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cardContent {
