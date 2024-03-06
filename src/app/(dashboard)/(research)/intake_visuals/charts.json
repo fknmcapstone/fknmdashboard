@@ -211,6 +211,11 @@
           "name": "Common Funding Models for GTA SFPs",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiOGU2ODQzZGMtNWI3YS00ZjM4LWFkNTQtMmQwYTUzNGNkZGYxIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
           "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Top 10 food categories for energy at school",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiM2IwMjBiZDMtMjI2OS00YmZiLTk1OTItZTAzZjdiZDk0ZGRiIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
         }
       ]
     }
