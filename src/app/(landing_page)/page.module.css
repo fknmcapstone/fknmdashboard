@@ -17,7 +17,8 @@
 
 .header p {
   color: var(--light-text-color);
-  font-size: var(--title-font-size);
+  font-size: 2rem;
+  font-weight: bold;
   white-space: nowrap;
 }
 
@@ -36,6 +37,7 @@
   padding-block: 0.7rem;
   display: flex;
   font-size: var(--small-paragraph-font-size);
+  font-weight: bold;
   justify-content: space-around;
   background-color: var(--secondary-color);
   place-items: center;
@@ -243,6 +245,7 @@
   font-weight: 500;
   grid-column: span 2;
   align-items: center;
+  font-weight: bold;
 }
 
 .sectionLink {

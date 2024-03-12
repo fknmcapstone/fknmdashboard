@@ -1,6 +1,5 @@
 "use client";
 
-import { outfit } from "./fonts";
 import "./globals.css";
 import Image from "next/image";
 import styles from "./(landing_page)/page.module.css";
@@ -9,6 +8,8 @@ import { Providers } from "./providers";
 import Navbar from "./(landing_page)/navbar";
 import { useEffect, useState } from "react";
 import Sidebar from "./(landing_page)/sidebar";
+import localFont from "next/font/local";
+const TradeGothic = localFont({ src: "./TradeGothic.woff2" });
 
 export default function RootLayout({
   children,
@@ -48,7 +49,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={outfit.className}>
+    <html lang="en" className={TradeGothic.className}>
       <body>
         <Providers>
           <section>
