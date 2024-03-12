@@ -5,6 +5,7 @@ import {
   sortPublications,
   yearBtnList,
 } from "../citations_year_buttons";
+import ToTopButton from "../../(research)/intake_visuals/reveal";
 
 let sources: { [key: string]: { [key: string]: string }[] } = sortPublications(
   data.presentations
@@ -13,6 +14,7 @@ let sources: { [key: string]: { [key: string]: string }[] } = sortPublications(
 export default function Presentations() {
   return (
     <main className={styles.main}>
+      <ToTopButton />
       <p data-cy="presentations_title" className={styles.publicationsTitle}>
         Presentations
       </p>

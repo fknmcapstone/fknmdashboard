@@ -107,9 +107,11 @@ export default function RootLayout({
                   <div />
                 )}
               </div>
+              <Navbar width={width} />
+              {width < 1024 ? (
+                <Sidebar isOpen={isOpen} toggle={toggle} />
+              ) : null}
             </nav>
-            <Navbar width={width} />
-            {width < 1024 ? <Sidebar isOpen={isOpen} toggle={toggle} /> : null}
 
             {children}
           </section>
