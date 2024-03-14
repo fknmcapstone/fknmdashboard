@@ -11,11 +11,12 @@
   "dependencies": {
     "@nextui-org/accordion": "^2.0.28",
     "@nextui-org/react": "^2.2.9",
+    "Cypress": "npm:cypress@^13.6.4",
     "chart.js": "^4.4.1",
     "chartjs-plugin-datalabels": "^2.2.0",
     "embla-carousel-autoplay": "^8.0.0-rc19",
     "embla-carousel-react": "^8.0.0-rc19",
-    "framer-motion": "^10.16.12",
+    "framer-motion": "^10.18.0",
     "next": "14.0.1",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",

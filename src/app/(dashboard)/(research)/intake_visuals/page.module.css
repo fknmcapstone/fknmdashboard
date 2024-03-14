@@ -37,6 +37,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 2rem;
+  overflow-wrap: break-word;
 }
 
 .shortcutMenuSeparator {
@@ -123,6 +124,7 @@
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: none;
+  width: 200px;
 }
 
 .tooltipContainer:hover .tooltip {

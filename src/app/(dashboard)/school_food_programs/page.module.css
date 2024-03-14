@@ -25,6 +25,7 @@
   grid-column: 1 / span 2;
   text-align: end;
   margin-top: 2rem;
+  margin-left: 3rem;
 }
 
 #helperText {
@@ -72,14 +73,13 @@
   font-weight: 500;
 }
 
-
 .greyRectangle {
   grid-row: 4; 
-  grid-column: 3 / span 2; 
-  margin-inline-end: 7rem;
+  grid-column: 3 / span 1; 
+  margin-inline-end: 35rem;
   height: 3rem; 
   background-color: var(--background-color); 
   border-radius: 5px;
   margin-top: 1rem; 
-  transform: translateY(-9rem);
+  transform: translateY(-23rem);
 }
