@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import styles from "./page.module.css";
+import styles from "./common_elements.module.css";
 
 const ToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,18 +27,10 @@ const ToTopButton = () => {
 
   return (
     <button
+      className={styles.toTopButton}
       data-cy="return_to_top_button"
       style={{
         display: isVisible ? "block" : "none",
-        position: "fixed",
-        bottom: "2rem",
-        right: "2rem",
-        width: "3rem",
-        height: "3rem",
-        borderRadius: "30px",
-        backgroundColor: "white",
-        boxShadow: "var(--card-shadow)",
-        zIndex: "1",
       }}
       onClick={scrollToTop}
     >

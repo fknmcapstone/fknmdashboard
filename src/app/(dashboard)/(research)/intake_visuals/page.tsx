@@ -33,7 +33,12 @@ function shortcutMenuList() {
 
     charts.forEach((chart) => {
       shortcuts.push(
-        <Link key={chart.name} href={`#${category}${chart.name}`}>
+        <Link
+          key={chart.name.replace(/ /g, "_").replace(/[^a-zA-Z ]/g, "")}
+          href={`#${category.replace(/ /g, "_")}${chart.name
+            .replace(/ /g, "_")
+            .replace(/[^a-zA-Z ]/g, "")}`}
+        >
           {chart.name}
         </Link>
       );
@@ -71,8 +76,12 @@ function chartList() {
     categoryCharts.forEach((chart) => {
       charts.push(
         <div
-          key={`${category}${chart.name}`}
-          data-cy={`${category}${chart.name}`}
+          id={`${category.replace(/ /g, "_")}${chart.name
+            .replace(/ /g, "_")
+            .replace(/[^a-zA-Z ]/g, "")}`}
+          data-cy={`${category.replace(/ /g, "_")}${chart.name
+            .replace(/ /g, "_")
+            .replace(/[^a-zA-Z ]/g, "")}`}
           className={styles.chartArea}
         >
           <div className={styles.tooltipContainer}>
@@ -113,6 +122,9 @@ export default function IntakeVisuals() {
           {shortcutMenuList()}
         </div>
       </h1>
+      <div data-cy="mobile_shortcut_menu" className={styles.mobileShortcutMenu}>
+        {shortcutMenuList()}
+      </div>
 
       <div className={styles.chartColumn}>{chartList()}</div>
     </main>

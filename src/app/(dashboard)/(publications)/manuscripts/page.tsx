@@ -20,9 +20,6 @@ export default function Manuscripts() {
       </p>
       <div className={styles.yearBtnList}>{yearBtnList(sources)}</div>
       {citationsList(sources)}
-
-      {/* Not enough manuscripts currently to fill a page, needs filler to fully extend */}
-      <div className={styles.filler} />
     </main>
   );
 }
