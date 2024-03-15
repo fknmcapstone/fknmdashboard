@@ -52,6 +52,25 @@ export default function Home() {
             national school food program policy.
           </div>
 
+          <div data-cy="landing_text3" className={styles.landingBlurb3}>
+            <div
+              data-cy="landing_text_title"
+              className={styles.landingBlurbTitle}
+            >
+              Our Initiative
+            </div>
+            The Feeding Kids, Nourishing Minds (FKNM) School-Based Nutrition
+            Research Initiative is a project funded by a donation from
+            President’s Choice Children’s Charity. Through a landscape policy
+            analysis and series of systematic reviews, a comprehensive overview
+            of school meal and snack programs in Canada is being organised in an
+            interactive dashboard including consideration of equity indicators.
+            The impact of the COVID-19 pandemic, including changes in policies
+            and programs, highlight the lessons learned and opportunities for
+            leveraging these programs and improving resiliency in marginalized
+            communities. The FKNM is informing the guidance of a framework for a
+            national school food program policy.
+          </div>
           <Link
             data-cy="covid_link"
             href="/covid_19_impacts/"
@@ -74,8 +93,8 @@ export default function Home() {
           >
             <div
               className={[
-                styles.sectionTitleLinkContainer,
-                styles.sectionTitle,
+                styles.sectionTitleLinkContainer0,
+                styles.sectionTitle0,
                 styles.sectionLink,
               ].join(" ")}
             >
@@ -156,7 +175,9 @@ export default function Home() {
 
           <div data-cy="research_text" className={styles.sectionBlurb}>
             Explore data directly related to the school food environments and
-            student eating behaviours at school. These pages bring together the
+            student eating behaviours at school. Gain insights into the impact 
+            of various school food programs and initiatives on dietary habits 
+            and overall well-being.These pages bring together the
             qualitative and quantitative data collected by the FKNM team.
           </div>
         </div>
