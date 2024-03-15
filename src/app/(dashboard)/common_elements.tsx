@@ -28,8 +28,18 @@ const ToTopButton = () => {
   return (
     <button
       data-cy="return_to_top_button"
-      className={styles.returnToTopButton}
-      style={{ display: isVisible ? "block" : "none" }}
+      style={{
+        display: isVisible ? "block" : "none",
+        position: "fixed",
+        bottom: "2rem",
+        right: "2rem",
+        width: "3rem",
+        height: "3rem",
+        borderRadius: "30px",
+        backgroundColor: "white",
+        boxShadow: "var(--card-shadow)",
+        zIndex: "1",
+      }}
       onClick={scrollToTop}
     >
       <svg viewBox="-8 -8 40 40" fill="none">

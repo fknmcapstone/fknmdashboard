@@ -27,8 +27,8 @@ function GraphCard({
     >
       <iframe
         title={title}
-        width="110%"
-        height="100%"
+        width="600"
+        height="373.5"
         src={src}
         allowFullScreen
       ></iframe>
@@ -90,9 +90,10 @@ export default function MeasurementToolAssessment() {
           frameBorder="0"
           allowFullScreen={true}
         ></iframe>
+        <div className={styles.greyRectangle}></div> {/* grey rectangle */}
       </div>
-      <div className={styles.greyRectangle}></div> {/* grey rectangle */}
-      <div className={styles.subtext}>
+
+      <div className={styles.subtext1}>
         <p data-cy="blurb">
           A comprehensive assessment of the dimensions of school food
           environments and determinants of student eating behaviours at school
@@ -102,35 +103,38 @@ export default function MeasurementToolAssessment() {
           and implement in the forthcoming national SFP. This review explored
           the dimensions of school food environments and determinants of student
           food and nutrition behaviour as captured by existing measurement
-          tools. The Canadian context was further explored, investigating
-          whether current Canadian school food environments upheld
-          country-specific key characteristics recommended by experts. The
-          quality of the measurement tools was assessed according to a detailed
-          criteria to determine their comprehensiveness, relevance,
-          generalizability, and feasibility. Of the 73 articles included in this
-          review, majority featured tools that were rated as either medium or
-          low quality, while only 8 studies (11%) used tools rated as high
-          quality. The dimensions and determinants captured in the studies
-          varied widely; the physical dimension was captured the most and the
-          economic dimension the least. The school meal component and the
-          meal-specific factors were investigated the most among others in the
-          CDC and Graziose’s framework, respectively. In particular, ‘high
-          quality’ studies commonly used quantitative methods and measured more
-          than one dimension. In studies conducted in Canada, the physical and
-          sociocultural dimensions were captured by all but one of the
-          measurement tools, and only one measurement tool was rated as ‘high
-          quality’. When assessed against the key characteristics of the
-          Canadian school food environment framework, all Canadian studies
-          indicated school food environments address the health promoting
-          characteristic, however, none of the measurement tools captured the
-          universality characteristic.
+          tools. <br />
+          <br />
+          The Canadian context was further explored, investigating whether
+          current Canadian school food environments upheld country-specific key
+          characteristics recommended by experts. The quality of the measurement
+          tools was assessed according to a detailed criteria to determine their
+          comprehensiveness, relevance, generalizability, and feasibility.
         </p>
       </div>
-      <div data-cy="shortcut_menu" className={styles.shortcutMenu}>
-        <p className={styles.shortcutMenuTitle}>Shortcuts</p>
-        <div className={styles.shortcutMenuList}>{linkList}</div>
+      <div className={styles.subtext2}>
+        <p data-cy="blurb">
+          Of the 73 articles included in this review, majority featured tools
+          that were rated as either medium or low quality, while only 8 studies
+          (11%) used tools rated as high quality. The dimensions and
+          determinants captured in the studies varied widely; the physical
+          dimension was captured the most and the economic dimension the least.
+          The school meal component and the meal-specific factors were
+          investigated the most among others in the CDC and Graziose’s
+          framework, respectively. <br />
+          <br />
+          In particular, ‘high quality’ studies commonly used quantitative
+          methods and measured more than one dimension. In studies conducted in
+          Canada, the physical and sociocultural dimensions were captured by all
+          but one of the measurement tools, and only one measurement tool was
+          rated as ‘high quality’. When assessed against the key characteristics
+          of the Canadian school food environment framework, all Canadian
+          studies indicated school food environments address the health
+          promoting characteristic, however, none of the measurement tools
+          captured the universality characteristic.
+        </p>
       </div>
-      {graphCardList}
+      <div className={styles.chartGrid}>{graphCardList}</div>
     </main>
   );
 }

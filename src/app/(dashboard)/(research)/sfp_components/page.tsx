@@ -1,22 +1,18 @@
 "use client";
 
-import {
-  AddedComponentsCarousel,
-  DistributionMethodsCarousel,
-  ProcurementStrategiesCarousel,
-  FoodTypeAndVarietyCarousel,
-  UserFeeModelCarousel,
-  CulturalAspectsCarousel,
-} from "./carousels";
+import { SFPComponentsCarousel } from "./carousels";
 import styles from "./page.module.css";
 import React from "react";
 
 import { Chart as ChartJS, ArcElement, Title, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2"; // For Donut Chart
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import data from "./sfp_components.json";
+import { SFPComponent } from "./sfp_components_widgets_buttons";
+import ToTopButton from "../../common_elements";
 
 // Data for the Layered Donut Chart
-const data = {
+const doughnutData = {
   datasets: [
     {
       // Split up the 16 slices in outer donut chart layer appropriately
@@ -304,16 +300,51 @@ if (window.innerWidth < 768) {
   options.layout.padding.right = 520;
   options.layout.padding.bottom = 10;
   options.plugins.datalabels.font.size = 9;
-  options.plugins.datalabels.font.weight = 'normal';
+  options.plugins.datalabels.font.weight = "normal";
 }
 
 ChartJS.register(ArcElement, Title, Tooltip, Legend, ChartDataLabels);
 
 export default function QualitativeData() {
+  let components_info = Object.values(data.added_components_info).map(
+    (component) => {
+      return [<SFPComponent quote={component.quote} />];
+    }
+  );
+  let distribution_info = Object.values(data.distribution_methods_info).map(
+    (component) => {
+      return [<SFPComponent quote={component.quote} />];
+    }
+  );
+  let procurement_info = Object.values(data.procurement_strategies_info).map(
+    (component) => {
+      return [<SFPComponent quote={component.quote} />];
+    }
+  );
+  let food_type_info = Object.values(data.food_type_variety_info).map(
+    (component) => {
+      return [<SFPComponent quote={component.quote} />];
+    }
+  );
+  let models_info = Object.values(data.user_fee_models_info).map(
+    (component) => {
+      return [<SFPComponent quote={component.quote} />];
+    }
+  );
+  let culture_info = Object.values(data.cultural_aspects_info).map(
+    (component) => {
+      return [<SFPComponent quote={component.quote} />];
+    }
+  );
+
   return (
     <main className={styles.main}>
-      <div style={{ width: "900px", height: "780px" }}>
-        <Doughnut data={data} options={options} />
+      <ToTopButton />
+      <div
+        style={{ width: "900px", height: "780px" }}
+        className={styles.doughnutChart}
+      >
+        <Doughnut data={doughnutData} options={options} />
       </div>
       <p id="food-literacy" className={styles.card1Title}>
         Added Program Components (Food Literacy)
@@ -346,7 +377,7 @@ export default function QualitativeData() {
           as respect for others' cultural food practices/choices, sharing,
           gratitude, and waste reduction.
         </p>
-        <AddedComponentsCarousel></AddedComponentsCarousel>
+        <SFPComponentsCarousel componentList={components_info} />
       </div>
       <p id="distribution-methods" className={styles.card2Title}>
         Distribution Methods
@@ -378,7 +409,7 @@ export default function QualitativeData() {
           down and eating meals with others, through providing adequate time for
           students to eat their lunch and/or snacks.
         </p>
-        <DistributionMethodsCarousel></DistributionMethodsCarousel>
+        <SFPComponentsCarousel componentList={distribution_info} />
       </div>
       <p id="procurement-strategies" className={styles.card3Title}>
         Procurement Strategies
@@ -401,7 +432,7 @@ export default function QualitativeData() {
           guarantee the freshness, quality, and healthfulness of the food, while
           simultaneously supporting the growth of local economies.
         </p>
-        <ProcurementStrategiesCarousel></ProcurementStrategiesCarousel>
+        <SFPComponentsCarousel componentList={procurement_info} />
       </div>
       <p id="food-type-variety" className={styles.card4Title}>
         Food Type and Variety
@@ -433,7 +464,7 @@ export default function QualitativeData() {
           as fruits and vegetables, and limit pre-packaged processed foods that
           are high in sodium, sugar, and saturated fat.
         </p>
-        <FoodTypeAndVarietyCarousel></FoodTypeAndVarietyCarousel>
+        <SFPComponentsCarousel componentList={food_type_info} />
       </div>
       <p id="user-fee-model" className={styles.card5Title}>
         User Fee Model
@@ -455,7 +486,7 @@ export default function QualitativeData() {
           School food programs must be inclusive, ensuring access for all
           students, irrespective of their financial circumstances.
         </p>
-        <UserFeeModelCarousel></UserFeeModelCarousel>
+        <SFPComponentsCarousel componentList={models_info} />
       </div>
       <p id="cultural-aspects" className={styles.card6Title}>
         Cultural Aspects
@@ -492,7 +523,7 @@ export default function QualitativeData() {
           about the diverse aspects of food (i.e., aroma, ingredients, spices,
           and origins).
         </p>
-        <CulturalAspectsCarousel></CulturalAspectsCarousel>
+        <SFPComponentsCarousel componentList={culture_info} />
       </div>
     </main>
   );
