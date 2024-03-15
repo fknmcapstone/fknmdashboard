@@ -11,6 +11,7 @@
   .main {
       grid-template-columns: 50rem;
       column-gap: 10rem;
+      padding-block-end: 3vh;
 
 
   }
@@ -35,7 +36,7 @@
   width: 60%;
   display: grid;
   grid-template-rows: 4rem 1fr;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr ;
   color: var(--light-text-color);
   padding: 2rem;
   border-radius: var(--blurb-border-radius);
@@ -50,6 +51,7 @@
   .horizontalInfoBox {
     margin-block-start: 3rem;
     position: relative;
+    grid-template-columns: 1fr ;
     height: auto;
     width: 100%;
 
