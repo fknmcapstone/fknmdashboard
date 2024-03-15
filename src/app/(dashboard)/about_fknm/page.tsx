@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   Accordion,
   AccordionItem,
@@ -7,7 +7,6 @@ import {
   ModalContent,
   ModalHeader,
   ModalBody,
-  ModalFooter,
   Button,
   useDisclosure,
 } from "@nextui-org/react";
@@ -44,7 +43,14 @@ function ProfileCard({ name, subtitle, imageURL, content }: Person) {
           <div className={styles.profileSubTitle}>{subtitle}</div>
         </div>
       </Button>
-      <Modal size="5xl" isOpen={isOpen} onClose={onClose}>
+      <Modal
+        size="5xl"
+        isOpen={isOpen}
+        onClose={onClose}
+        className={styles.modal}
+        placement="top-center"
+        scrollBehavior="outside"
+      >
         <ModalContent>
           <ModalHeader className={styles.modalHeader}>
             <Image
@@ -91,15 +97,19 @@ export default function AboutFKNM() {
         Choice Children’s Charity. Through a landscape policy analysis and
         series of systematic reviews, a comprehensive overview of school meal
         and snack programs in Canada is being organised in an interactive
-        dashboard including consideration of equity indicators. Key stakeholders
-        (e.g., schools, schoolboards, teachers, funding agencies) have been
-        engaged to identify facilitators, barriers and user groups of school
-        food programs and essential dashboard indicators needed to inform
-        program design. The impact of the COVID-19 pandemic, including changes
-        in policies and programs, highlight the lessons learned and
+        dashboard including consideration of equity indicators.
+        <br />
+        <br />
+        Key stakeholders (e.g., schools, schoolboards, teachers, funding
+        agencies) have been engaged to identify facilitators, barriers and user
+        groups of school food programs and essential dashboard indicators needed
+        to inform program design. The impact of the COVID-19 pandemic, including
+        changes in policies and programs, highlight the lessons learned and
         opportunities for leveraging these programs and improving resiliency in
-        marginalized communities. The FKNM is informing the guidance of a
-        framework for a national school food program policy.
+        marginalized communities. <br />
+        <br />
+        The FKNM is informing the guidance of a framework for a national school
+        food program policy.
       </div>
 
       <div className={styles.heading} data-cy="meet_header">

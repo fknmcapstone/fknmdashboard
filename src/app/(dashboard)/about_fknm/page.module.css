@@ -1,11 +1,18 @@
 .main {
   display: grid;
   background-color: var(--background-color);
-  width: 100%;
+  width: 100vw;
   height: 100%;
   padding-block-end: 5vh;
   grid-template-rows: auto;
   color: var(--dark-text-color);
+}
+@media only screen and (max-width: 768px) {
+  .main {
+    padding-inline: 10vw;
+    padding-block-end: 3vh;
+    place-items: center;
+  }
 }
 
 .heading {
@@ -13,6 +20,13 @@
   font-size: var(--subtitle-font-size);
   font-weight: bold;
   margin-top: 2.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 19px;
+    margin-top: 2rem;
+  }
 }
 
 .separator {
@@ -31,6 +45,14 @@
   margin-top: 2vh;
 }
 
+@media only screen and (max-width: 600px) {
+  .textContent {
+    width: 98%;
+    font-size: 15px;
+    white-space: initial;
+  }
+}
+
 .accordion {
   border: none;
   margin-block-start: 2rem;
@@ -39,13 +61,15 @@
   margin-block-end: 2rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .accordion {
+    width: 98%;
+  }
+}
+
 .accordionItem {
-  /* background-color: #fcfcfc !important; */
   border-color: var(--tertiary-color);
-  /* border-radius: 8px; */
   padding-inline: 1.5lvw;
-  /* margin-block-end: 2lvh; */
-  /* border-block-end-width: 2px; */
 }
 
 .popover {
@@ -126,6 +150,7 @@
   margin-top: 10px;
   font-weight: bold;
   white-space: initial;
+  padding-inline: 5px;
 }
 .profileSubTitle {
   margin-top: 3px;
@@ -134,6 +159,25 @@
   max-height: 3em;
   white-space: initial;
   color: var(--grey-text-color);
+  padding-inline: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .popover {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+
+  .cardButton {
+    height: 20lvh;
+    font-size: 15px;
+  }
+
+  .profileImage {
+    margin-inline: 20px;
+    padding-inline: 5px;
+    width: 85px;
+    height: 85px;
+  }
 }
 
 .modalHeader {
