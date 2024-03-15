@@ -45,9 +45,17 @@ export default function CurrentPrograms() {
   return (
     <main className={styles.main}>
       <div id={styles.aboutText}>
-        <p>This systematic review aimed to synthesize and appraise literature on Canadian school food and nutrition interventions, policies and programs and their effects on diets and nutritional status.Overall, the literature remains largely heterogenous and primarily focused on nutrition education programs which use subjective assessments to infer changes in nutrition.</p>
+        <p>
+          This systematic review aimed to synthesize and appraise literature on
+          Canadian school food and nutrition interventions, policies and
+          programs and their effects on diets and nutritional status.Overall,
+          the literature remains largely heterogenous and primarily focused on
+          nutrition education programs which use subjective assessments to infer
+          changes in nutrition.
+        </p>
       </div>
       <div id={styles.helperText}>
+        Hover over the map to see more information.
       </div>
       <div data-cy="legend" id={styles.foldableLegend}>
         <p id={styles.legendTitle}>Legend</p>
@@ -81,8 +89,9 @@ export default function CurrentPrograms() {
           frameBorder="0"
           allowFullScreen={true}
         ></iframe>
+        <div className={styles.greyRectangle} />
+        {/* grey rectangle */}
       </div>
-      <div className={styles.greyRectangle}></div> {/* grey rectangle */}
     </main>
   );
 }

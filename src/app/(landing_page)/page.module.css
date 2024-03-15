@@ -128,7 +128,7 @@
 
 .landingPageContent {
   display: grid;
-  grid-template-rows: 85vh min-content 35rem 35rem min-content min-content;
+  grid-template-rows: 85vh min-content min-content min-content min-content;
   grid-auto-flow: column;
 }
 
@@ -152,7 +152,7 @@
 
 .covid19Link {
   text-decoration: underline;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.4);
   justify-self: end;
   align-self: flex-end;
   margin: 2rem;
@@ -160,13 +160,35 @@
   border-radius: var(--blurb-border-radius);
 }
 
-.landingBlurb {
+.landingBlurbTitle {
+  color: var(--dark-text-color);
+  margin-block-end: 0.5rem;
+  width: 100%;
+  font-weight: 600;
+  font-size: var(--subtitle-font-size);
+  text-align: left;
+}
+
+.landingBlurb1 {
   width: 35vw;
-  background: rgba(255, 255, 255, 0.65);
-  padding: 3rem;
+  background: rgba(255, 255, 255, 0.6);
+  padding-block: 2rem;
+  padding-inline: 3.5rem;
   border-radius: var(--blurb-border-radius);
   align-self: center;
-  transform: translateY(-20%);
+  transform: translate(-30%, -20%);
+  justify-self: end;
+  margin-inline-end: 5rem;
+}
+
+.landingBlurb2 {
+  width: 33vw;
+  background: rgba(255, 255, 255, 0.6);
+  padding-block: 2rem;
+  padding-inline: 3rem;
+  border-radius: var(--blurb-border-radius);
+  align-self: center;
+  transform: translate(0%, -85%);
   justify-self: end;
   margin-inline-end: 5rem;
 }
@@ -186,11 +208,11 @@
   justify-self: center;
   width: 70rem;
   display: grid;
-  margin-block-start: 3rem;
-  grid-template-rows: min-content 18rem;
+  margin-block-start: 2rem;
+  grid-template-rows: min-content 15rem;
   grid-template-columns: 30rem 30rem;
   background: rgba(255, 255, 255, 0.65);
-  padding: 4rem;
+  padding: 3rem;
   grid-auto-flow: column;
 }
 
@@ -266,17 +288,14 @@
 .collabContainer {
   justify-self: center;
   grid-row: 6;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .logo {
   align-self: center;
-  margin: 0.5rem;
-  border-radius: var(--card-border-radius);
-  background-color: rgba(255, 255, 255, 0.65);
   padding: 1rem;
-  box-shadow: var(--card-shadow);
 }
 
 /* Enable hover only on non-touch devices */
