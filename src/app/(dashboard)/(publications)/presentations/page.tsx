@@ -5,7 +5,7 @@ import {
   sortPublications,
   yearBtnList,
 } from "../citations_year_buttons";
-import ToTopButton from "../../(research)/intake_visuals/reveal";
+import ToTopButton from "../../common_elements";
 
 let sources: { [key: string]: { [key: string]: string }[] } = sortPublications(
   data.presentations

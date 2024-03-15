@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import styles from "./page.module.css";
 import Link from "next/link";
-import ToTopButton from "./reveal";
+import ToTopButton from "../../common_elements";
 
 import chartData from "./charts.json";
 import { JSX } from "react";

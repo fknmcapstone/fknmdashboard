@@ -9,6 +9,7 @@ import { Doughnut } from "react-chartjs-2"; // For Donut Chart
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import data from "./sfp_components.json";
 import { SFPComponent } from "./sfp_components_widgets_buttons";
+import ToTopButton from "../../common_elements";
 
 // Data for the Layered Donut Chart
 const doughnutData = {
@@ -338,6 +339,7 @@ export default function QualitativeData() {
 
   return (
     <main className={styles.main}>
+      <ToTopButton />
       <div
         style={{ width: "900px", height: "780px" }}
         className={styles.doughnutChart}
