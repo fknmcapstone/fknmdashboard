@@ -14,9 +14,9 @@ import {
 import styles from "./page.module.css";
 import Image from "next/image";
 
-
 interface Person {
   name: string;
+  subtitle: string;
   imageURL: string;
   content: string;
 }
@@ -25,8 +25,7 @@ interface PeopleData {
   [committee: string]: Person[];
 }
 
-
-function ProfileCard({ name, imageURL, content }: Person ) {
+function ProfileCard({ name, subtitle, imageURL, content }: Person) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -42,6 +41,7 @@ function ProfileCard({ name, imageURL, content }: Person ) {
             priority
           />
           <div className={styles.profileName}>{name}</div>
+          <div className={styles.profileSubTitle}>{subtitle}</div>
         </div>
       </Button>
       <Modal size="5xl" isOpen={isOpen} onClose={onClose}>
@@ -56,9 +56,10 @@ function ProfileCard({ name, imageURL, content }: Person ) {
               priority
             />
             <div className={styles.modalHeader}>{name}</div>
+            <div className={styles.modalSubheader}>{subtitle}</div>
           </ModalHeader>
           <ModalBody>
-            <div className={styles.modalText}>{content}</div>
+            <p className={styles.modalText}>{content}</p>
           </ModalBody>
         </ModalContent>
       </Modal>
@@ -105,7 +106,7 @@ export default function AboutFKNM() {
         Meet The Team
       </div>
       <Accordion
-        variant="splitted"
+        variant="light"
         selectionMode="multiple"
         className={styles.accordion}
       >
@@ -121,6 +122,7 @@ export default function AboutFKNM() {
               {members.map((person: any, index: number) => (
                 <ProfileCard
                   key={index}
+                  subtitle={person.subtitle}
                   name={person.name}
                   imageURL={person.imageUrl}
                   content={person.content}

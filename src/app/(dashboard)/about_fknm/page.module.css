@@ -12,7 +12,15 @@
   text-align: center;
   font-size: var(--subtitle-font-size);
   font-weight: bold;
-  margin-top: 4rem;
+  margin-top: 2.5rem;
+}
+
+.separator {
+  background-color: var(--primary-color);
+  margin-inline: 20lvw;
+  margin-block-end: 1rem;
+  height: 1px;
+  border: none;
 }
 
 .textContent {
@@ -24,20 +32,30 @@
 }
 
 .accordion {
+  border: none;
   margin-block-start: 2rem;
-  width: 80rem;
+  width: 70lvw;
   justify-self: center;
+  margin-block-end: 2rem;
 }
 
 .accordionItem {
-  background-color: #ebe9e9 !important;
+  /* background-color: #fcfcfc !important; */
+  border-color: var(--tertiary-color);
+  /* border-radius: 8px; */
+  padding-inline: 1.5lvw;
+  /* margin-block-end: 2lvh; */
+  /* border-block-end-width: 2px; */
 }
 
 .popover {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  padding-inline-end: 1.5lvw;
+  padding-inline-start: 1lvw;
+  padding-block-end: 1lvh;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2lvw;
   margin-bottom: 2vh;
   justify-content: space-around;
   align-content: space-around;
@@ -48,13 +66,14 @@
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 5%;
+  white-space: pre-wrap;
 }
 
-.modalHeader{
-align-items: center;
-display: flex;
-flex-direction: column;
-margin-top: 0.25rem;
+.modalHeader {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.25rem;
 }
 
 .popoverTrigger {
@@ -66,56 +85,63 @@ margin-top: 0.25rem;
 
 .collabContainer {
   justify-self: center;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .logo {
   align-self: center;
-  margin: 0.5rem;
-  border-radius: var(--card-border-radius);
-  background-color: rgba(255, 255, 255, 0.65);
   padding: 1rem;
-  box-shadow: var(--card-shadow);
 }
 
 .cardButton {
-  border: none;
-  background: none;
-  padding-top: 70%;
-  padding-bottom: 70%;
-  padding-right: 2%;
-  padding-left: 2%;
+  background: #fdfdfd;
+  border-width: 2px;
+  border-radius: 2px;
+  padding-block: 75%;
+  padding-inline: 4lvw;
   cursor: pointer;
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .cardContent {
   width: 130px;
-  height: 200px; 
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
+  height: 200px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .profileImage {
-  width: 120px; 
-  height: 120px; 
-  border-radius: 50%; 
-  overflow: hidden; 
+  width: 120px;
+  height: 120px;
+  margin-inline: 5px;
+  padding-inline: 5px;
+  border-radius: 50%;
 }
-
 
 .profileName {
   margin-top: 10px;
   font-weight: bold;
+  white-space: initial;
+}
+.profileSubTitle {
+  margin-top: 3px;
+  font-weight: bold;
+  line-height: 1.5em;
+  max-height: 3em;
+  white-space: initial;
+  color: var(--grey-text-color);
 }
 
-.modalHeader{
+.modalHeader {
   color: black;
+}
+
+.modalSubheader {
+  color: var(--grey-text-color);
+  margin-top: 2px;
+  font-size: var(--small-paragraph-font-size);
 }
