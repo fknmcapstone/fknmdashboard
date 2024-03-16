@@ -137,7 +137,7 @@ export default function COVID19Impacts() {
         ></Image>
         <p
           data-cy="header4"
-          className={[styles.infoHeader, styles.centerAlign,].join(" ")}
+          className={[styles.infoHeader, styles.centerAlign].join(" ")}
         >
           Adaptations
         </p>

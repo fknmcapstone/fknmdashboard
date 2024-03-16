@@ -1,11 +1,16 @@
 .main {
-  display: grid;
   background-color: var(--background-color);
   width: 100%;
   padding-block-end: 5vh;
   grid-template-columns: 50rem 50rem;
   justify-content: center;
   column-gap: 3rem;
+}
+@media only screen and (min-width: 760px) {
+  .main {
+    display: grid ;
+
+  }
 }
 @media only screen and (max-width: 760px) {
   .main {
@@ -25,7 +30,10 @@
 }
 @media only screen and (max-width: 600px) {
   .title {
-      font-size: 14px;
+      display: grid ;
+      font-size: 20px;
+      font-weight: 800;
+
   }
 }
 
@@ -40,23 +48,22 @@
   color: var(--light-text-color);
   padding: 2rem;
   border-radius: var(--blurb-border-radius);
-  margin-block-start: 2rem;
-  row-gap: 2rem;
-  grid-auto-rows: max-content;
 }
-
-
 
 @media only screen and (max-width: 760px) {
   .horizontalInfoBox {
     margin-block-start: 3rem;
-    position: relative;
     grid-template-columns: 1fr ;
     height: auto;
     width: 100%;
-
+    row-gap: 2rem;
+    justify-content: center;
+    grid-auto-rows: max-content;
+    border-radius: var(--blurb-border-radius);
+    text-align: center;
   }
 }
+
 
 
 .infoBox_rightAlign{
@@ -142,7 +149,8 @@
 }
 @media only screen and (max-width: 760px) {
   .maskImg {
-    display: none;
+    padding-right: 5rem;
+    right: 2rem;
   }
 }
 
@@ -154,6 +162,11 @@
   width: 80%;
 }
 
+@media only screen and (max-width: 760px) {
+  .impactCOVID19Box {
+    width: 100%;
+  }
+}
 .spanBothColumns {
   grid-column: span 2;
 }
@@ -197,20 +210,17 @@
 
 @media only screen and (max-width: 760px) {
   .verticalInfoBox {
-    position: relative;
+    grid-template-columns: 1fr ;
     height: max-content;
     width: 100%;
     padding: 2rem;
     color: var(--light-text-color);
-    margin-block-start: 2rem;
+    margin-block-start: 3rem;
     border-radius: var(--blurb-border-radius);
-    justify-content: center;
-    row-gap: 2rem;
     text-align: center;
 
   }
 }
-
 
 .rightAlign {
   justify-self: end;
@@ -238,13 +248,13 @@
   text-align: left;
   place-self: center;
 }
+
 @media only screen and (max-width: 760px) {
   .infoText {
     width: 20rem;
-    
   }
-
 }
+
 .verticalInfoWidth {
   width: 20rem;
 }
