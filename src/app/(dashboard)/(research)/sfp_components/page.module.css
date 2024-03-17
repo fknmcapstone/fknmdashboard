@@ -19,6 +19,8 @@
 
 .doughnutChart {
   justify-self: center;
+  height: 200px;
+  width: auto;
 }
 
 .card1Title {
@@ -209,6 +211,7 @@
     width: 35%;
     margin-top: 1.5vh;
     margin-bottom: 5vh;
+    margin-left: 1.5vh;
     border: 1px solid #082454;
     justify-self: left;
   }
@@ -218,6 +221,7 @@
     width: 35%;
     margin-top: 1.5vh;
     margin-bottom: 5vh;
+    margin-left: 1.5vh;
     border: 1px solid #082454;
     justify-self: left;
   }
@@ -227,6 +231,7 @@
     width: 35%;
     margin-top: 1.5vh;
     margin-bottom: 5vh;
+    margin-left: 1.5vh;
     border: 1px solid #082454;
     justify-self: left;
   }
@@ -236,6 +241,7 @@
     width: 35%;
     margin-top: 1.5vh;
     margin-bottom: 5vh;
+    margin-left: 1.5vh;
     border: 1px solid #082454;
     justify-self: left;
   }
@@ -245,6 +251,7 @@
     width: 35%;
     margin-top: 1.5vh;
     margin-bottom: 5vh;
+    margin-left: 1.5vh;
     border: 1px solid #082454;
     justify-self: left;
   }
@@ -254,6 +261,7 @@
     width: 35%;
     margin-top: 1.5vh;
     margin-bottom: 5vh;
+    margin-left: 1.5vh;
     border: 1px solid #082454;
     justify-self: left;
   }
@@ -392,3 +400,4 @@
 .paginationDotSelected {
   background-color: var(--pagination-dots-selected);
 }
+
