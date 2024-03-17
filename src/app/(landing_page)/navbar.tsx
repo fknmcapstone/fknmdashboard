@@ -20,7 +20,7 @@ const Navbar = ({ width }: { width: number }) => {
       <div
         data-cy="nav_bar"
         className={styles.navigationbar}
-        style={{ display: width < 1024 ? "none" : "block" }}
+        style={{ display: width < 768 ? "none" : "block" }}
       >
         <div className={styles.navigationbarContent}>
           <Link

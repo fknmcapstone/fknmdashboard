@@ -7,8 +7,8 @@
 }
 @media only screen and (max-width: 768px) {
   .main {
-      padding-inline: 10vw;
-      padding-block-end: 3vh;
+    padding-inline: 10vw;
+    padding-block-end: 3vh;
   }
 }
 
@@ -47,7 +47,7 @@
   justify-content: space-around;
   background-color: var(--secondary-color);
   place-items: center;
-  z-index: 1;
+  z-index: 4;
 }
 
 .navigationbarContent {
@@ -156,16 +156,23 @@
   font-size: var(--small-paragraph-font-size);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1080px) {
+  .landingBlurbContainer {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .landingPageContent {
     grid-template-rows: auto min-content min-content min-content min-content;
     grid-auto-flow: row;
   }
-  
+
   .landingBlurbContainer {
     display: grid;
     place-items: center;
     justify-self: center;
+    height: auto;
     width: 100vw;
     height: auto;
     background: linear-gradient(
@@ -191,7 +198,7 @@
   padding: 1rem;
   border-radius: var(--blurb-border-radius);
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .covid19Link {
     font-size: 12px;
     justify-self: center;
@@ -209,25 +216,29 @@
 }
 
 .landingBlurb1 {
-  width: 35vw;
+  width: 40rem;
   background: rgba(255, 255, 255, 0.6);
   padding-block: 2rem;
   padding-inline: 3.5rem;
   border-radius: var(--blurb-border-radius);
   align-self: center;
-  transform: translate(-30%, -20%);
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
   justify-self: end;
   margin-inline-end: 5rem;
 }
 
 .landingBlurb2 {
-  width: 33vw;
+  position: absolute;
+  top: 30rem;
+  right: 5rem;
+  width: 40rem;
   background: rgba(255, 255, 255, 0.6);
   padding-block: 2rem;
   padding-inline: 3rem;
   border-radius: var(--blurb-border-radius);
   align-self: center;
-  transform: translate(0%, -85%);
   justify-self: end;
   margin-inline-end: 5rem;
 }
@@ -236,7 +247,22 @@
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1080px) {
+  .landingBlurb1 {
+    position: static;
+    justify-self: center;
+  }
+  .landingBlurb2 {
+    position: static;
+    justify-self: center;
+  }
+
+  .covid19Link {
+    justify-self: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .landingBlurbTitle {
     color: var(--dark-text-color);
     margin-block-end: 0.5rem;
@@ -244,7 +270,7 @@
     font-size: 19px;
     text-align: center;
   }
-  
+
   .landingBlurb1,
   .landingBlurb2 {
     display: none;
@@ -261,7 +287,7 @@
     margin: 1rem auto;
     justify-self: center;
     margin-top: 10px;
-    font-size: 15px; 
+    font-size: 15px;
   }
 }
 
@@ -288,7 +314,7 @@
   grid-auto-flow: column;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .researchTitle {
     color: var(--dark-text-color);
     margin-block-start: 2rem;
@@ -297,7 +323,7 @@
     font-size: 20px;
     text-align: center;
   }
-  
+
   .researchSection {
     color: var(--dark-text-color);
     height: auto;
@@ -342,11 +368,20 @@
   background-size: cover;
   margin-inline-end: 3rem;
 }
+@media only screen and (max-width: 1024px) {
+  .researchSection {
+    grid-template-columns: 2fr 3fr;
+    width: 90%;
+  }
+}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .schoolFoodSectionImg,
   .researchSectionImg {
     display: none;
+  }
+  .researchSection {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -360,10 +395,10 @@
   grid-auto-flow: row;
   align-items: center;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .sectionTitleLinkContainer {
     justify-items: start;
-    font-size: var(--small-paragraph-font-size); 
+    font-size: var(--small-paragraph-font-size);
   }
 }
 
@@ -377,11 +412,11 @@
   grid-auto-flow: row;
   align-items: center;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .sectionTitleLinkContainer0 {
     justify-items: start;
     grid-template-columns: 1fr;
-    font-size: var(--small-paragraph-font-size); 
+    font-size: var(--small-paragraph-font-size);
   }
 }
 
@@ -401,9 +436,9 @@
   font-weight: bold;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .sectionTitle0,
-  .sectionTitle  {
+  .sectionTitle {
     padding: 0.2rem;
   }
 }
@@ -430,7 +465,7 @@
   font-size: var(--small-paragraph-font-size);
   margin-block-start: 2rem;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .sectionBlurb {
     font-size: 15px;
     padding-bottom: 0rem;

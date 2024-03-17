@@ -58,18 +58,20 @@ export default function RootLayout({
               <div
                 data-cy="header"
                 className={styles.header}
-                style={{ padding: width < 1024 ? "0.5rem" : "2rem" }}
+                style={{ padding: width < 768 ? "0.5rem" : "2rem" }}
               >
                 <Link href="/">
                   <div
                     data-cy="header_logo"
-                    style={{ paddingRight: width < 1024 ? "0.8rem" : "2rem" }}
+                    style={{
+                      paddingRight: width < 1768024 ? "0.8rem" : "2rem",
+                    }}
                   >
                     <Image
                       src="/fknm_logo.png"
                       alt="FKNM Logo"
-                      width={width < 1024 ? 50 : 70}
-                      height={width < 1024 ? 50 : 70}
+                      width={width < 768 ? 50 : 70}
+                      height={width < 768 ? 50 : 70}
                       priority
                     />
                   </div>
@@ -87,7 +89,7 @@ export default function RootLayout({
                     </p>
                   )}
                 </Link>
-                {width < 1024 ? (
+                {width < 768 ? (
                   <div className={styles.menuButtonContainer}>
                     <div className={styles.menuButton} onClick={toggle}>
                       {/* Menu icon */}
@@ -109,9 +111,7 @@ export default function RootLayout({
                 )}
               </div>
               <Navbar width={width} />
-              {width < 1024 ? (
-                <Sidebar isOpen={isOpen} toggle={toggle} />
-              ) : null}
+              {width < 768 ? <Sidebar isOpen={isOpen} toggle={toggle} /> : null}
             </nav>
 
             {children}
