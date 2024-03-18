@@ -87,19 +87,14 @@
 }
 
 .card {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: auto;
   justify-self: center;
-  padding: 2rem;
+  padding: 1rem;
   margin: 2rem;
   border-radius: 2px;
   border-width: 1px;
   border-color: var(--tertiary-color);
-  width: auto;
-  max-width: 90vw;
+  width: auto; 
   height: auto;
-  max-height: 90vh;
   background: white;
   font-weight: 600;
   font-size: var(--subtitle-font-size);
@@ -111,6 +106,11 @@
   object-fit: contain;
 }
 
+.map .iframe {
+  width: 1024px; 
+  height: 612px; 
+}
+
 .greyRectangle {
   position: absolute;
   top: 0;
@@ -120,4 +120,60 @@
   height: 2.5rem;
   background-color: var(--background-color);
   transform: translateY(35.8rem);
+}
+
+@media screen and (max-width: 600px) {
+  .main{
+    grid-template-columns: 1fr;
+  }
+  .title {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+  .subtext1 {
+    grid-row: 2;
+    grid-column: span 2;
+  }
+ 
+#map {
+  position: relative;
+  grid-row: 3;
+  grid-column: 1;
+  margin: auto;
+  margin-block-start: 5rem;
+  margin-block-end: 5rem;
+  min-width: 0rem;
+  max-width: 30rem;
+  height: 50%;
+  width: 50%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.map .iframe{
+  width:20%
+  height=20%
+}
+
+.subtext2{
+  grid-row: 4;
+}
+
+.chartGrid{
+  display: grid;
+  justify-self: center;
+  grid-row: 5 / span 4;
+  grid-column: span 1;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content max-content;
+}
+
+.card .iframe{
+  width: 100%;
+  height: auto;
+}
+.card{
+  padding: 0rem;
+  margin: 2rem;
+}
 }

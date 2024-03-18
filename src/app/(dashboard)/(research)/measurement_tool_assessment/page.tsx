@@ -27,8 +27,6 @@ function GraphCard({
     >
       <iframe
         title={title}
-        width="600"
-        height="373.5"
         src={src}
         allowFullScreen
       ></iframe>
