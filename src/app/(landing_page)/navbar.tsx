@@ -14,14 +14,10 @@ function Separator({ height = 1 }) {
   );
 }
 
-const Navbar = ({ width }: { width: number }) => {
+const Navbar = () => {
   return (
     <>
-      <div
-        data-cy="nav_bar"
-        className={styles.navigationbar}
-        style={{ display: width < 768 ? "none" : "block" }}
-      >
+      <div data-cy="nav_bar" className={styles.navigationbar}>
         <div className={styles.navigationbarContent}>
           <Link
             data-cy="nav_school_food_programs"
