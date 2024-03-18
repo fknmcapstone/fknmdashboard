@@ -18,7 +18,13 @@
   align-items: center;
   height: 5rem;
   flex-direction: row;
+  padding: 2rem;
   background-color: var(--primary-color);
+}
+
+.headerLogo {
+  width: 70px;
+  height: 70px;
 }
 
 .header p {
@@ -26,16 +32,44 @@
   font-size: 2rem;
   font-weight: bold;
   white-space: nowrap;
+  padding-inline-start: 2rem;
+}
+
+.headerBreak {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .headerLogo {
+    width: 50px;
+    height: 50px;
+  }
+  .header {
+    padding: 0.5rem;
+  }
+  .headerBreak {
+    display: block;
+  }
+  .header p {
+    font-size: 1rem;
+    padding-inline-start: 0.8rem;
+  }
 }
 
 .menuButtonContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  flex-grow: 1;
+  display: none;
 }
 .menuButton {
   margin: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .menuButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
 }
 
 .navigationbar {
@@ -48,6 +82,12 @@
   background-color: var(--secondary-color);
   place-items: center;
   z-index: 4;
+}
+
+@media only screen and (max-width: 768px) {
+  .navigationbar {
+    display: none;
+  }
 }
 
 .navigationbarContent {
@@ -96,14 +136,20 @@
 
 /* CSS for Sidebar component */
 .backdrop {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 34, 83, 0.95);
-  position: absolute;
-  padding-top: 6rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: min-content;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .backdrop {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 34, 83, 0.95);
+    position: absolute;
+    padding-top: 6rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+  }
 }
 
 .closeButton {
