@@ -25,11 +25,12 @@ function GraphCard({
         styles.card,
       ].join(" ")}
     >
-      <iframe
-        title={title}
-        src={src}
-        allowFullScreen
-      ></iframe>
+      <iframe title={title} 
+      src={src} 
+      allowFullScreen
+      width="100%"
+      height="100%">
+      </iframe>
     </div>
   );
 }
@@ -78,12 +79,12 @@ export default function MeasurementToolAssessment() {
       <h1 className={styles.title}>
         <p data-cy="title">Measurement Tool Assessment</p>
       </h1>
-      <div id={styles.map}>
+      <div className={styles.map}>
         <iframe
           data-cy="chart_frame"
           title="Track_3_Map"
-          width="1024"
-          height="612"
+          width="100%"
+          height="100%"
           src="https://app.powerbi.com/view?r=eyJrIjoiZDUxMmU5MmYtZGVlMi00MzZmLTljMjctYjI0MjBjMGQ5OTI2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9"
           frameBorder="0"
           allowFullScreen={true}

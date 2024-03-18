@@ -3,8 +3,7 @@
   width: 100%;
   padding-bottom: 7rem;
   background-color: var(--background-color);
-  max-zoom: 1.8;
-  grid-template-columns: 40lvw 1fr;
+  grid-template-columns: 40vw 1fr;
   grid-template-rows: 5rem min-content min-content min-content;
   color: var(--dark-text-color);
 }
@@ -40,7 +39,7 @@
   }
 }
 
-@media screen and (max-width: 1390px) {
+@media screen and (max-width: 1390px)  {
   .subtext1 {
     margin-top: 0%;;
     margin-bottom: 5%;
@@ -54,19 +53,15 @@
   font-size: var(--small-paragraph-font-size);
 }
 
-#map {
+.map {
   position: relative;
   grid-row: span 2;
   margin-block-start: 2rem;
-  margin-block-end: 0.5rem;
-  min-width: 30rem;
-  max-width: 90rem;
+  margin-block-end: 2rem;
   margin-inline-end: 3rem;
   grid-column: 2;
-  height: 90%;
-  width: 100%;
-  object-fit: contain;
-  border-radius: 50%;
+  height: 37.5rem;
+  width: 60rem;
 }
 
 @media screen and (max-width: 1750px) {
@@ -93,22 +88,11 @@
   border-radius: 2px;
   border-width: 1px;
   border-color: var(--tertiary-color);
-  width: auto; 
-  height: auto;
+  width: 37.5rem; 
+  height: 23.3rem;
   background: white;
   font-weight: 600;
   font-size: var(--subtitle-font-size);
-}
-
-.card img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-
-.map .iframe {
-  width: 1024px; 
-  height: 612px; 
 }
 
 .greyRectangle {
@@ -125,39 +109,35 @@
 @media screen and (max-width: 600px) {
   .main{
     grid-template-columns: 1fr;
+    grid-template-rows: 5rem min-content min-content min-content;
   }
   .title {
     grid-row: 1;
-    grid-column: span 2;
   }
   .subtext1 {
     grid-row: 2;
-    grid-column: span 2;
+    overflow-wrap: break-word;
   }
  
-#map {
+.map {
   position: relative;
-  grid-row: 3;
+  grid-row: 3/ span 1;
+  margin-block-start: 2rem;
+  margin-block-end: 2rem;
   grid-column: 1;
-  margin: auto;
-  margin-block-start: 5rem;
-  margin-block-end: 5rem;
-  min-width: 0rem;
-  max-width: 30rem;
-  height: 50%;
-  width: 50%;
-  object-fit: contain;
-  border-radius: 50%;
+  height: 17.5rem;
+  width: 27rem;
+  margin-inline: 3rem;
 }
 
-.map .iframe{
-  width:20%
-  height=20%
-}
 
-.subtext2{
+.subtext2 {
   grid-row: 4;
+  grid-column: span 2;
+  margin-inline: 4rem;
+  font-size: var(--small-paragraph-font-size);
 }
+
 
 .chartGrid{
   display: grid;
@@ -168,12 +148,25 @@
   grid-template-rows: max-content max-content;
 }
 
-.card .iframe{
-  width: 100%;
-  height: auto;
-}
+
 .card{
-  padding: 0rem;
+  padding: 1rem;
   margin: 2rem;
+  width: 27rem; 
+  height: 17.5rem;
 }
+.greyRectangle{
+  display: none;
+}
+}
+
+@media screen and (max-width: 480px) {
+  .map {
+    height: 16rem; 
+    width: 20rem;
+  }
+  .card {
+    height: 16rem; 
+    width: 18rem;
+  }
 }
