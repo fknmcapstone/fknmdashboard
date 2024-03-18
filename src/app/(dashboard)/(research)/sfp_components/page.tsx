@@ -96,7 +96,7 @@ const doughnutData = {
 };
 
 // Data Labels for Inner Donut Chart Layer (spacing adjusted)
-const innerLabels = [
+let innerLabels = [
   "   Food    Literacy",
   "Cultural Aspects",
   "     User      Fee Model",
@@ -104,9 +104,19 @@ const innerLabels = [
   "Procurement Strategies",
   "  Methods of  Distribution",
 ];
+if (window.innerWidth < 768) {
+  innerLabels = [
+    "   Food    Literacy",
+    "Cultural Aspects",
+    " User    Fee Model",
+    "Food Type & Variety",
+    " Sourcing  Strategy",
+    "  Methods of  Distribution",
+  ];
+}
 
 // Data Labels for Outer Donut Chart Layer (spacing adjusted)
-const outerLabels = [
+let outerLabels = [
   "Nutrition Education",
   " Food  Skills",
   "     Food    Appreciation",
@@ -125,6 +135,27 @@ const outerLabels = [
   "Prioritize Mealtimes",
 ];
 
+if (window.innerWidth < 768) {
+  outerLabels = [
+    "Nutrition Education",
+    " Food  Skills",
+    "Appreciate     Food   ",
+    "Sense of     Belonging",
+    "Cultural   Foods",
+    " Inclusive Integration",
+    "Flexible & Affordable",
+    "Universal Access & Participation",
+    "Wide Food Variety",
+    "Culturally Appropriate",
+    " Healthy &   High Quality",
+    "Tailored & Versatile",
+    "Locally Focused",
+    " Hybrid Models",
+    "Food     Provision",
+    "Prioritize Mealtimes",
+  ];
+}
+
 // Customizing appearance of Donut Chart
 const options: any = {
   responsive: true,
@@ -135,7 +166,7 @@ const options: any = {
       top: 20,
       left: 0,
       right: 0,
-      bottom: 0,
+      bottom: 10,
     },
   },
   plugins: {
@@ -295,12 +326,10 @@ const options: any = {
 };
 
 if (window.innerWidth < 768) {
-  options.layout.padding.top = 20;
-  options.layout.padding.left = 10;
-  options.layout.padding.right = 520;
-  options.layout.padding.bottom = 10;
+  options.layout.padding.right = 550;
   options.plugins.datalabels.font.size = 9;
   options.plugins.datalabels.font.weight = "normal";
+  options.aspectRatio = 1.8;
 }
 
 ChartJS.register(ArcElement, Title, Tooltip, Legend, ChartDataLabels);
@@ -528,3 +557,4 @@ export default function QualitativeData() {
     </main>
   );
 }
+
