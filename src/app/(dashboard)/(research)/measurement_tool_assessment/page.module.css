@@ -28,6 +28,25 @@
   font-size: var(--small-paragraph-font-size);
 }
 
+@media screen and (max-width: 1730px) and (min-width: 1583px) {
+  .subtext1 {
+    transform: translateY(-20%);
+  }
+}
+
+@media screen and (max-width: 1583px) and (min-width: 1390px) {
+  .subtext1 {
+    transform: translateY(-10%);
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  .subtext1 {
+    transform: none;
+    margin-bottom: 5%;
+  }
+}
+
 .subtext2 {
   grid-row: 3;
   grid-column: span 2;
